@@ -1,17 +1,15 @@
 package com.tecnologias.uniagustapp;
 
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
 import com.tecnologias.uniagustapp.adapters.MenuAdapter;
@@ -48,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
+        mAdapter.setOnClickListener(new MenuAdapter.EventoOnItemClick() { // *
+            @Override // *
+            public void onItemClick(int posicion) { // *
+                Toast.makeText(MainActivity.this, ""+posicion, Toast.LENGTH_SHORT).show(); // *
+            } // *
+        }); // *
+
     }
 
     public void getCateg() {
@@ -55,11 +60,11 @@ public class MainActivity extends AppCompatActivity {
         menuCategorias = new ArrayList<>(1);
 
         List<ItemMenu> itemMenus = new ArrayList<>(5);
-        itemMenus.add(new ItemMenu("Home",R.mipmap.home)); // comentarié los demás submenus para ensayar solo con uno
-        itemMenus.add(new ItemMenu("Biblioteca",R.mipmap.biblioteca));
-        itemMenus.add(new ItemMenu("EduVirtual",R.mipmap.eduvirtual));
-        itemMenus.add(new ItemMenu("Directorio",R.mipmap.directorio));
-        itemMenus.add(new ItemMenu("Preguntas",R.mipmap.preguntasf));
+        itemMenus.add(new ItemMenu("Home", R.mipmap.home)); // comentarié los demás submenus para ensayar solo con uno
+        itemMenus.add(new ItemMenu("Biblioteca", R.mipmap.biblioteca));
+        itemMenus.add(new ItemMenu("EduVirtual", R.mipmap.eduvirtual));
+        itemMenus.add(new ItemMenu("Directorio", R.mipmap.directorio));
+        itemMenus.add(new ItemMenu("Preguntas", R.mipmap.preguntasf));
         menuCategorias.add(new MenuCategoria("Portal", itemMenus));
 /*
         itemMenus = new ArrayList<>(2);

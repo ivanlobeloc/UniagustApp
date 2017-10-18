@@ -17,52 +17,48 @@ import java.util.List;
  * Created by Brad on 12/18/2016.
  */
 
-public class MenuAdapter extends ExpandableRecyclerViewAdapter<MenuCategoriaViewHolder, ItemMenuViewHolder> implements View.OnClickListener {
+public class MenuAdapter extends ExpandableRecyclerViewAdapter<MenuCategoriaViewHolder, ItemMenuViewHolder> { // *
 
-    private View.OnClickListener listener;
+    // Creas la interfaz que implementaras en la actividad // *
+    public interface EventoOnItemClick { // *
+        public void onItemClick(int posicion); // *
+    } // *
 
-        public MenuAdapter(List<? extends ExpandableGroup> groups) {
-            super(groups);
-        }
+    EventoOnItemClick listener; // *
 
-        @Override
-        public MenuCategoriaViewHolder onCreateGroupViewHolder(ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.list_categoria, parent, false);
-            return new MenuCategoriaViewHolder(view);
-        }
-
-        @Override
-        public ItemMenuViewHolder onCreateChildViewHolder(ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.list_subcategoria, parent, false);
-
-            view.setOnClickListener(this);
-
-            return new ItemMenuViewHolder(view);
-        }
-
-        @Override
-        public void onBindChildViewHolder(ItemMenuViewHolder holder, int flatPosition, ExpandableGroup group, int childIndex) {
-            ItemMenu itemMenu = (ItemMenu) group.getItems().get(childIndex);
-
-            holder.setItemName(itemMenu.getItemName());
-            holder.setIcono(itemMenu.getImagenId());
-        }
-
-        @Override
-        public void onBindGroupViewHolder(MenuCategoriaViewHolder holder, int flatPosition, ExpandableGroup group) {
-            holder.setCategoriaName(group.getTitle());
-        }
-
-    public void setOnClickListener(View.OnClickListener listener){
-        this.listener=listener;
+    public MenuAdapter(List<? extends ExpandableGroup> groups) {
+        super(groups);
     }
 
     @Override
-    public void onClick(View view) {
-        if (listener!=null){
-            listener.onClick(view);
-        }
+    public MenuCategoriaViewHolder onCreateGroupViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.list_categoria, parent, false);
+        return new MenuCategoriaViewHolder(view);
     }
+
+    @Override
+    public ItemMenuViewHolder onCreateChildViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.list_subcategoria, parent, false);
+
+        return new ItemMenuViewHolder(view, listener); // *
+    }
+
+    @Override
+    public void onBindChildViewHolder(ItemMenuViewHolder holder, int flatPosition, ExpandableGroup group, int childIndex) {
+        ItemMenu itemMenu = (ItemMenu) group.getItems().get(childIndex);
+
+        holder.setItemName(itemMenu.getItemName());
+        holder.setIcono(itemMenu.getImagenId());
+    }
+
+    @Override
+    public void onBindGroupViewHolder(MenuCategoriaViewHolder holder, int flatPosition, ExpandableGroup group) {
+        holder.setCategoriaName(group.getTitle());
+    }
+
+    public void setOnClickListener(EventoOnItemClick listener){
+        this.listener=listener;
+    } // *
 }
