@@ -1,6 +1,13 @@
 package com.tecnologias.uniagustapp;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
+
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -10,16 +17,19 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
 import android.widget.Toast;
 
 import com.tecnologias.uniagustapp.adapters.MenuAdapter;
+import com.tecnologias.uniagustapp.fragmentos.Fragment_biblioteca;
 import com.tecnologias.uniagustapp.models.ItemMenu;
 import com.tecnologias.uniagustapp.models.MenuCategoria;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+    implements Fragment_biblioteca.OnFragmentInteractionListener {
 
     //variables recyclerview
     private RecyclerView mRecyclerView;
@@ -32,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+        final Fragment biblioteca = new Fragment_biblioteca();
 
         //RecyclerView en el navigationDrawer
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -66,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         itemMenus.add(new ItemMenu("Directorio", R.mipmap.directorio));
         itemMenus.add(new ItemMenu("Preguntas", R.mipmap.preguntasf));
         menuCategorias.add(new MenuCategoria("Portal", itemMenus));
-/*
+        /*
         itemMenus = new ArrayList<>(2);
         itemMenus.add(new ItemMenu("Siga"));
         itemMenus.add(new ItemMenu("Apoyo a la Presencialidad"));
@@ -82,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         itemMenus.add(new ItemMenu("Google +"));
         itemMenus.add(new ItemMenu("Instagram"));
         menuCategorias.add(new MenuCategoria("Redes Sociales", itemMenus));
-*/
+        */
     }
 
     @Override
@@ -116,5 +129,4 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
 }
