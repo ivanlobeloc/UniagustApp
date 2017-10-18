@@ -4,15 +4,21 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import android.widget.Toast;
 
 import com.tecnologias.uniagustapp.adapters.MenuAdapter;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_biblioteca;
@@ -47,41 +53,19 @@ public class MainActivity extends AppCompatActivity
         mRecyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
         mRecyclerView.setAdapter(mAdapter);
 
-        mAdapter.setOnClickListener(new MenuAdapter.EventoOnItemClick() {
-
-            FragmentManager fragmentManager = getFragmentManager();
-
-            @Override
-            public void onItemClick(int posicion) {
-
-                switch (posicion) {
-
-                    case 1:
-                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.content_main, biblioteca).commit();
-                        // Aqui colocas el codigo para lanzar el fragmento cuando se precione
-                        // el primer item del ExpandableRecyclerViewAdapter
-                        break;
-
-                    case 2:
-                        // Aqui colocas el codigo para lanzar el fragmento cuando se precione
-                        // el segundo item del ExpandableRecyclerViewAdapter
-                        break;
-
-                    case 3:
-                        // Aqui colocas el codigo para lanzar el fragmento cuando se precione
-                        // el tercer item del ExpandableRecyclerViewAdapter
-                        break;
-                }
-            }
-        });
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
+
+        mAdapter.setOnClickListener(new MenuAdapter.EventoOnItemClick() { // *
+            @Override // *
+            public void onItemClick(int posicion) { // *
+                Toast.makeText(MainActivity.this, ""+posicion, Toast.LENGTH_SHORT).show(); // *
+            } // *
+        }); // *
+
     }
 
     public void getCateg() {
@@ -89,11 +73,11 @@ public class MainActivity extends AppCompatActivity
         menuCategorias = new ArrayList<>(1);
 
         List<ItemMenu> itemMenus = new ArrayList<>(5);
-        itemMenus.add(new ItemMenu("Home",R.mipmap.home)); // comentarié los demás submenus para ensayar solo con uno
-        itemMenus.add(new ItemMenu("Biblioteca",R.mipmap.biblioteca));
-        itemMenus.add(new ItemMenu("EduVirtual",R.mipmap.eduvirtual));
-        itemMenus.add(new ItemMenu("Directorio",R.mipmap.directorio));
-        itemMenus.add(new ItemMenu("Preguntas",R.mipmap.preguntasf));
+        itemMenus.add(new ItemMenu("Home", R.mipmap.home)); // comentarié los demás submenus para ensayar solo con uno
+        itemMenus.add(new ItemMenu("Biblioteca", R.mipmap.biblioteca));
+        itemMenus.add(new ItemMenu("EduVirtual", R.mipmap.eduvirtual));
+        itemMenus.add(new ItemMenu("Directorio", R.mipmap.directorio));
+        itemMenus.add(new ItemMenu("Preguntas", R.mipmap.preguntasf));
         menuCategorias.add(new MenuCategoria("Portal", itemMenus));
         /*
         itemMenus = new ArrayList<>(2);
