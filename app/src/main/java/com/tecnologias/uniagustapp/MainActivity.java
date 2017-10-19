@@ -62,7 +62,29 @@ public class MainActivity extends AppCompatActivity
         mAdapter.setOnClickListener(new MenuAdapter.EventoOnItemClick() { // *
             @Override // *
             public void onItemClick(int posicion) { // *
-                Toast.makeText(MainActivity.this, ""+posicion, Toast.LENGTH_SHORT).show(); // *
+                //Toast.makeText(MainActivity.this, ""+posicion, Toast.LENGTH_SHORT).show(); // *
+                switch (posicion) {
+
+                    case 1:
+                        Toast.makeText(MainActivity.this, "Home "+posicion, Toast.LENGTH_SHORT).show(); // *
+                        break;
+
+                    case 2:
+                        Toast.makeText(MainActivity.this, "Biblioteca "+posicion, Toast.LENGTH_SHORT).show(); // *
+                        break;
+
+                    case 3:
+                        Toast.makeText(MainActivity.this, "EduVirtual "+posicion, Toast.LENGTH_SHORT).show(); // *
+                        break;
+
+                    case 4:
+                        Toast.makeText(MainActivity.this, "Directorio "+posicion, Toast.LENGTH_SHORT).show(); // *
+                        break;
+
+                    case 5:
+                        Toast.makeText(MainActivity.this, "Preguntas "+posicion, Toast.LENGTH_SHORT).show(); // *
+                        break;
+                }
             } // *
         }); // *
 
