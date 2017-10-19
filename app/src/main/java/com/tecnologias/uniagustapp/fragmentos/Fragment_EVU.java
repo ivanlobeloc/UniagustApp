@@ -2,21 +2,22 @@ package com.tecnologias.uniagustapp.fragmentos;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.tecnologias.uniagustapp.R;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Fragment_evu extends Fragment {
+public class Fragment_EVU extends Fragment {
 
 
-    public Fragment_evu() {
+    public Fragment_EVU() {
         // Required empty public constructor
     }
 
@@ -30,6 +31,7 @@ public class Fragment_evu extends Fragment {
         String url="http://eduvirtual.uniagustiniana.edu.co/home/";
         WebView view=(WebView) v.findViewById(R.id.wv_evu);
         view.getSettings().setJavaScriptEnabled(true);
+        view.setWebViewClient(new WebViewClient());// Agregamos un WebViewCliente, esto permite que se sigan ejecutando los links dentro de este WebView
         view.loadUrl(url);
 
         return v;

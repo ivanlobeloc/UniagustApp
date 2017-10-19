@@ -6,18 +6,16 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
 
 import com.tecnologias.uniagustapp.R;
-
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Fragment_biblioteca extends Fragment {
+public class Fragment_Directorio extends Fragment {
 
 
-    public Fragment_biblioteca() {
+    public Fragment_Directorio() {
         // Required empty public constructor
     }
 
@@ -26,16 +24,11 @@ public class Fragment_biblioteca extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_biblioteca, container, false);
+        View v = inflater.inflate(R.layout.fragment_directorio, container, false);
 
-        String url="http://uniagustiniana.edu.co/biblioteca-uniagustiniana";
-        WebView view=(WebView) v.findViewById(R.id.wv_biblioteca);
-        view.getSettings().setJavaScriptEnabled(true);
-        view.loadUrl(url);
+        //Pendiente agregar el listado de Directorio
 
         return v;
     }
 
-    public interface OnFragmentInteractionListener {
-    }
 }

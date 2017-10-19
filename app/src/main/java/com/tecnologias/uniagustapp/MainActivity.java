@@ -12,16 +12,17 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-
 import android.widget.Toast;
 
 import com.tecnologias.uniagustapp.adapters.MenuAdapter;
-import com.tecnologias.uniagustapp.fragmentos.Fragment_biblioteca;
+import com.tecnologias.uniagustapp.fragmentos.Fragment_Biblioteca;
+import com.tecnologias.uniagustapp.fragmentos.Fragment_Directorio;
+import com.tecnologias.uniagustapp.fragmentos.Fragment_EVU;
+import com.tecnologias.uniagustapp.fragmentos.Fragment_Home;
+import com.tecnologias.uniagustapp.fragmentos.Fragment_Preguntas;
 import com.tecnologias.uniagustapp.models.ItemMenu;
 import com.tecnologias.uniagustapp.models.MenuCategoria;
 
@@ -29,7 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity
-    implements Fragment_biblioteca.OnFragmentInteractionListener {
+    implements Fragment_Biblioteca.OnFragmentInteractionListener {
 
     //variables recyclerview
     private RecyclerView mRecyclerView;
@@ -43,8 +44,12 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-        final Fragment biblioteca = new Fragment_biblioteca();
+        //Instancias de cada uno de los fragmentos que se van a cargar en el content main
+        final Fragment home = new Fragment_Home();
+        final Fragment biblioteca = new Fragment_Biblioteca();
+        final Fragment evu = new Fragment_EVU();
+        final Fragment directorio = new Fragment_Directorio();
+        final Fragment preguntas = new Fragment_Preguntas();
 
         //RecyclerView en el navigationDrawer
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -53,61 +58,89 @@ public class MainActivity extends AppCompatActivity
         mRecyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
         mRecyclerView.setAdapter(mAdapter);
 
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        mAdapter.setOnClickListener(new MenuAdapter.EventoOnItemClick() { // *
-            @Override // *
-            public void onItemClick(int posicion) { // *
-                //Toast.makeText(MainActivity.this, ""+posicion, Toast.LENGTH_SHORT).show(); // *
-                switch (posicion) {
+        if(savedInstanceState == null) {//Permite fijar una pantalla de inicio, en este caso Fragment_Home
+            FragmentManager fragmentManager = getFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.content_main, new Fragment_Home()).commit();
+        }
 
+        mAdapter.setOnClickListener(new MenuAdapter.EventoOnItemClick() { // *
+
+
+            //FragmentManager fragmentManager = getFragmentManager();
+            //FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+            @Override // *
+            public void onItemClick(int posicion) {
+
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                switch (posicion) {
                     case 1:
-                        Toast.makeText(MainActivity.this, "Home "+posicion, Toast.LENGTH_SHORT).show(); // *
+                        Toast.makeText(MainActivity.this, "Home "+posicion, Toast.LENGTH_SHORT).show();
+                        fragmentTransaction.replace(R.id.content_main, home).commit();
                         break;
 
                     case 2:
-                        Toast.makeText(MainActivity.this, "Biblioteca "+posicion, Toast.LENGTH_SHORT).show(); // *
+                        fragmentTransaction.replace(R.id.content_main, biblioteca).commit();
                         break;
 
                     case 3:
-                        Toast.makeText(MainActivity.this, "EduVirtual "+posicion, Toast.LENGTH_SHORT).show(); // *
+                        fragmentTransaction.replace(R.id.content_main, evu).commit();
                         break;
 
                     case 4:
-                        Toast.makeText(MainActivity.this, "Directorio "+posicion, Toast.LENGTH_SHORT).show(); // *
+                        fragmentTransaction.replace(R.id.content_main, directorio).commit();
                         break;
 
                     case 5:
-                        Toast.makeText(MainActivity.this, "Preguntas "+posicion, Toast.LENGTH_SHORT).show(); // *
+                        fragmentTransaction.replace(R.id.content_main, preguntas).commit();
+                        break;
+
+                    case 7:
+                        Toast.makeText(MainActivity.this, "Siga "+posicion, Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 8:
+                        Toast.makeText(MainActivity.this, "Apoyo a la presencialidad "+posicion, Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 9:
+                        Toast.makeText(MainActivity.this, "Virtualidad "+posicion, Toast.LENGTH_SHORT).show();
                         break;
                 }
-            } // *
-        }); // *
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);//permite que se oculte el DrawerLayout una vez seleccionado un item del menu
+            }
+        });
 
     }
 
     public void getCateg() {
 
-        menuCategorias = new ArrayList<>(1);
+        menuCategorias = new ArrayList<>(2);
 
-        List<ItemMenu> itemMenus = new ArrayList<>(5);
-        itemMenus.add(new ItemMenu("Home", R.mipmap.home)); // comentarié los demás submenus para ensayar solo con uno
-        itemMenus.add(new ItemMenu("Biblioteca", R.mipmap.biblioteca));
-        itemMenus.add(new ItemMenu("EduVirtual", R.mipmap.eduvirtual));
-        itemMenus.add(new ItemMenu("Directorio", R.mipmap.directorio));
-        itemMenus.add(new ItemMenu("Preguntas", R.mipmap.preguntasf));
-        menuCategorias.add(new MenuCategoria("Portal", itemMenus));
+        List<ItemMenu> itemMenus1 = new ArrayList<>(5);
+        itemMenus1.add(new ItemMenu("Home", R.mipmap.home)); // comentarié los demás submenus para ensayar solo con uno
+        itemMenus1.add(new ItemMenu("Biblioteca", R.mipmap.biblioteca));
+        itemMenus1.add(new ItemMenu("EduVirtual", R.mipmap.eduvirtual));
+        itemMenus1.add(new ItemMenu("Directorio", R.mipmap.directorio));
+        itemMenus1.add(new ItemMenu("Preguntas", R.mipmap.preguntasf));
+        menuCategorias.add(new MenuCategoria("Portal", itemMenus1));
+
+        List<ItemMenu> itemMenus2 = new ArrayList<>(3);
+        itemMenus2.add(new ItemMenu("Siga",R.mipmap.siga));
+        itemMenus2.add(new ItemMenu("Apoyo a la Presencialidad",R.mipmap.eduvirtual));
+        itemMenus2.add(new ItemMenu("Virtualidad",R.mipmap.eduvirtual));
+        menuCategorias.add(new MenuCategoria("Plataformas", itemMenus2));
         /*
-        itemMenus = new ArrayList<>(2);
-        itemMenus.add(new ItemMenu("Siga"));
-        itemMenus.add(new ItemMenu("Apoyo a la Presencialidad"));
-        itemMenus.add(new ItemMenu("Virtualidad"));
-        menuCategorias.add(new MenuCategoria("Plataformas", itemMenus));
-
         itemMenus = new ArrayList<>(7);
         itemMenus.add(new ItemMenu("Facebook"));
         itemMenus.add(new ItemMenu("Twitter"));

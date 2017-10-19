@@ -2,12 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.tecnologias.uniagustapp.fragmentos.Fragment_EVU">
+    tools:context="com.tecnologias.uniagustapp.fragmentos.Fragment_Preguntas">
 
-    <!-- TODO: Update blank fragment layout -->
 
     <WebView
-        android:id="@+id/wv_evu"
+        android:id="@+id/wv_preguntas"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>
