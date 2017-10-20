@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 import com.tecnologias.uniagustapp.R;
 
@@ -39,8 +40,10 @@ public class Fragment_Home extends Fragment {
         if (isOnline(getActivity())) {
             String url="http://www.uniagustiniana.edu.co/";
             view.loadUrl(url);
+            Toast.makeText(getActivity(),"SI hay conexión!",Toast.LENGTH_SHORT).show();
         } else {
             view.loadUrl("file:///android_asset/html/pagina_error.html");
+            Toast.makeText(getActivity(),"NO hay conexión!",Toast.LENGTH_SHORT).show();
         }
         /****************************************/
 
