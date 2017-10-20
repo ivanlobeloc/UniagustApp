@@ -3,6 +3,7 @@ package com.tecnologias.uniagustapp;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.support.v7.widget.LinearLayoutManager;
@@ -89,31 +90,39 @@ public class MainActivity extends AppCompatActivity
                         break;
 
                     case 2:
+                        Toast.makeText(MainActivity.this, "Biblioteca "+posicion, Toast.LENGTH_SHORT).show();
                         fragmentTransaction.replace(R.id.content_main, biblioteca).commit();
                         break;
 
                     case 3:
+                        Toast.makeText(MainActivity.this, "EVU "+posicion, Toast.LENGTH_SHORT).show();
                         fragmentTransaction.replace(R.id.content_main, evu).commit();
                         break;
 
                     case 4:
+                        Toast.makeText(MainActivity.this, "Directorio "+posicion, Toast.LENGTH_SHORT).show();
                         fragmentTransaction.replace(R.id.content_main, directorio).commit();
                         break;
 
                     case 5:
+                        Toast.makeText(MainActivity.this, "Preguntas "+posicion, Toast.LENGTH_SHORT).show();
                         fragmentTransaction.replace(R.id.content_main, preguntas).commit();
                         break;
 
                     case 7:
-                        Toast.makeText(MainActivity.this, "Siga "+posicion, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Siga PENDIENTE "+posicion, Toast.LENGTH_SHORT).show();
                         break;
 
                     case 8:
                         Toast.makeText(MainActivity.this, "Apoyo a la presencialidad "+posicion, Toast.LENGTH_SHORT).show();
+                        Intent i1 = new Intent(MainActivity.this, Activity_VirtualApoyo.class);
+                        startActivity(i1);
                         break;
 
                     case 9:
                         Toast.makeText(MainActivity.this, "Virtualidad "+posicion, Toast.LENGTH_SHORT).show();
+                        Intent i2 = new Intent(MainActivity.this, Activity_Virtualidad.class);
+                        startActivity(i2);
                         break;
                 }
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

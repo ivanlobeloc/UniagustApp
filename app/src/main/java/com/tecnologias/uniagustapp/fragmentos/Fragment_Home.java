@@ -7,20 +7,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.tecnologias.uniagustapp.R;
-
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class Fragment_Home extends Fragment {
 
-
     public Fragment_Home() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,9 +29,10 @@ public class Fragment_Home extends Fragment {
         String url="http://www.uniagustiniana.edu.co/";
         WebView view=(WebView) v.findViewById(R.id.wv_home);
         view.getSettings().setJavaScriptEnabled(true);
+        view.setWebViewClient(new WebViewClient());// Agregamos un WebViewCliente, esto permite que se sigan ejecutando los links dentro de este WebView
         view.loadUrl(url);
+
 
         return v;
     }
-
 }
