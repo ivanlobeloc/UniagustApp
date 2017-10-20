@@ -1,6 +1,8 @@
 package com.tecnologias.uniagustapp.fragmentos;
 
-
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -16,6 +18,8 @@ import com.tecnologias.uniagustapp.R;
  */
 public class Fragment_Home extends Fragment {
 
+    private static ConnectivityManager manager;
+
     public Fragment_Home() {
         // Required empty public constructor
     }
@@ -26,13 +30,26 @@ public class Fragment_Home extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_home, container, false);
 
-        String url="http://www.uniagustiniana.edu.co/";
+        //String url="http://www.uniagustiniana.edu.co/";
         WebView view=(WebView) v.findViewById(R.id.wv_home);
         view.getSettings().setJavaScriptEnabled(true);
         view.setWebViewClient(new WebViewClient());// Agregamos un WebViewCliente, esto permite que se sigan ejecutando los links dentro de este WebView
-        view.loadUrl(url);
-
+        //view.loadUrl(url);
+        /****************************************/
+        if (isOnline(getActivity())) {
+            String url="http://www.uniagustiniana.edu.co/";
+            view.loadUrl(url);
+        } else {
+            view.loadUrl("file:///android_asset/html/pagina_error.html");
+        }
+        /****************************************/
 
         return v;
+    }
+
+    public static boolean isOnline(Context context) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        return networkInfo != null && networkInfo.isAvailable() && networkInfo.isConnected();
     }
 }
