@@ -1,11 +1,11 @@
 package com.tecnologias.uniagustapp;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -31,7 +31,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity
-    implements Fragment_Biblioteca.OnFragmentInteractionListener {
+    implements Fragment_Biblioteca.OnFragmentInteractionListener, Fragment_Directorio.OnFragmentInteractionListener, Fragment_Home.OnFragmentInteractionListener,
+        Fragment_Preguntas.OnFragmentInteractionListener, Fragment_EVU.OnFragmentInteractionListener {
 
     //variables recyclerview
     private RecyclerView mRecyclerView;
@@ -67,12 +68,11 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
 
         if(savedInstanceState == null) {//Permite fijar una pantalla de inicio, en este caso Fragment_Home
-            FragmentManager fragmentManager = getFragmentManager();
+            FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.content_main, new Fragment_Home()).commit();
         }
 
         mAdapter.setOnClickListener(new MenuAdapter.EventoOnItemClick() { // *
-
 
             //FragmentManager fragmentManager = getFragmentManager();
             //FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity
             @Override // *
             public void onItemClick(int posicion) {
 
-                FragmentManager fragmentManager = getFragmentManager();
+                FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
                 switch (posicion) {
