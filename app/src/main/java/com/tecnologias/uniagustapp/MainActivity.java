@@ -22,8 +22,15 @@ import com.tecnologias.uniagustapp.adapters.MenuAdapter;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Biblioteca;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Directorio;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_EVU;
+import com.tecnologias.uniagustapp.fragmentos.Fragment_Facebook;
+import com.tecnologias.uniagustapp.fragmentos.Fragment_Flickr;
+import com.tecnologias.uniagustapp.fragmentos.Fragment_GooglePlus;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Home;
+import com.tecnologias.uniagustapp.fragmentos.Fragment_Instagram;
+import com.tecnologias.uniagustapp.fragmentos.Fragment_LinkedIn;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Preguntas;
+import com.tecnologias.uniagustapp.fragmentos.Fragment_Twitter;
+import com.tecnologias.uniagustapp.fragmentos.Fragment_Youtube;
 import com.tecnologias.uniagustapp.models.ItemMenu;
 import com.tecnologias.uniagustapp.models.MenuCategoria;
 
@@ -52,6 +59,14 @@ public class MainActivity extends AppCompatActivity
         final Fragment evu = new Fragment_EVU();
         final Fragment directorio = new Fragment_Directorio();
         final Fragment preguntas = new Fragment_Preguntas();
+        //Redes Sociales
+        final Fragment youtube = new Fragment_Youtube();
+        final Fragment twitter = new Fragment_Twitter();
+        final Fragment facebook = new Fragment_Facebook();
+        final Fragment flickr = new Fragment_Flickr();
+        final Fragment googlep = new Fragment_GooglePlus();
+        final Fragment instagram = new Fragment_Instagram();
+        final Fragment linkedin = new Fragment_LinkedIn();
 
         //RecyclerView en el navigationDrawer
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -59,7 +74,6 @@ public class MainActivity extends AppCompatActivity
         mAdapter = new MenuAdapter(menuCategorias);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
         mRecyclerView.setAdapter(mAdapter);
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -73,9 +87,6 @@ public class MainActivity extends AppCompatActivity
         }
 
         mAdapter.setOnClickListener(new MenuAdapter.EventoOnItemClick() { // *
-
-            //FragmentManager fragmentManager = getFragmentManager();
-            //FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
             @Override // *
             public void onItemClick(int posicion) {
@@ -124,17 +135,54 @@ public class MainActivity extends AppCompatActivity
                         Intent i2 = new Intent(MainActivity.this, Activity_Virtualidad.class);
                         startActivity(i2);
                         break;
+
+                    //REDES SOCIALES
+
+                    case 11:
+                        Toast.makeText(MainActivity.this, "Youtube "+posicion, Toast.LENGTH_SHORT).show();
+                        fragmentTransaction.replace(R.id.content_main, youtube).commit();
+                        break;
+
+                    case 12:
+                        Toast.makeText(MainActivity.this, "Twitter "+posicion, Toast.LENGTH_SHORT).show();
+                        fragmentTransaction.replace(R.id.content_main, twitter).commit();
+                        break;
+
+                    case 13:
+                        Toast.makeText(MainActivity.this, "Facebook "+posicion, Toast.LENGTH_SHORT).show();
+                        fragmentTransaction.replace(R.id.content_main, facebook).commit();
+                        break;
+
+                    case 14:
+                        Toast.makeText(MainActivity.this, "Flickr "+posicion, Toast.LENGTH_SHORT).show();
+                        fragmentTransaction.replace(R.id.content_main, flickr).commit();
+                        break;
+
+                    case 15:
+                        Toast.makeText(MainActivity.this, "Google + "+posicion, Toast.LENGTH_SHORT).show();
+                        fragmentTransaction.replace(R.id.content_main, googlep).commit();
+                        break;
+
+                    case 16:
+                        Toast.makeText(MainActivity.this, "Instagram "+posicion, Toast.LENGTH_SHORT).show();
+                        fragmentTransaction.replace(R.id.content_main, instagram).commit();
+                        break;
+
+                    case 17:
+                        Toast.makeText(MainActivity.this, "LinkedIn "+posicion, Toast.LENGTH_SHORT).show();
+                        fragmentTransaction.replace(R.id.content_main, linkedin).commit();
+                        break;
+
                 }
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                 drawer.closeDrawer(GravityCompat.START);//permite que se oculte el DrawerLayout una vez seleccionado un item del menu
             }
         });
-
     }
 
     public void getCateg() {
 
-        menuCategorias = new ArrayList<>(2);
+        menuCategorias = new ArrayList<>(12);
 
         List<ItemMenu> itemMenus1 = new ArrayList<>(5);
         itemMenus1.add(new ItemMenu("Home", R.mipmap.home)); // comentarié los demás submenus para ensayar solo con uno
@@ -149,17 +197,16 @@ public class MainActivity extends AppCompatActivity
         itemMenus2.add(new ItemMenu("Apoyo a la Presencialidad",R.mipmap.eduvirtual));
         itemMenus2.add(new ItemMenu("Virtualidad",R.mipmap.eduvirtual));
         menuCategorias.add(new MenuCategoria("Plataformas", itemMenus2));
-        /*
-        itemMenus = new ArrayList<>(7);
-        itemMenus.add(new ItemMenu("Facebook"));
-        itemMenus.add(new ItemMenu("Twitter"));
-        itemMenus.add(new ItemMenu("Linkedin"));
-        itemMenus.add(new ItemMenu("Flicker"));
-        itemMenus.add(new ItemMenu("Youtube"));
-        itemMenus.add(new ItemMenu("Google +"));
-        itemMenus.add(new ItemMenu("Instagram"));
-        menuCategorias.add(new MenuCategoria("Redes Sociales", itemMenus));
-        */
+
+        List<ItemMenu> itemMenus3 = new ArrayList<>(7);
+        itemMenus3.add(new ItemMenu("Youtube",R.mipmap.youtube));
+        itemMenus3.add(new ItemMenu("Twitter",R.mipmap.twitter));
+        itemMenus3.add(new ItemMenu("Facebook",R.mipmap.facebook));
+        itemMenus3.add(new ItemMenu("Flicker",R.mipmap.flickr));
+        itemMenus3.add(new ItemMenu("Google +",R.mipmap.googlep));
+        itemMenus3.add(new ItemMenu("Instagram",R.mipmap.instagram));
+        itemMenus3.add(new ItemMenu("LinkedIn",R.mipmap.linkedin));
+        menuCategorias.add(new MenuCategoria("Redes Sociales", itemMenus3));
     }
 
     @Override

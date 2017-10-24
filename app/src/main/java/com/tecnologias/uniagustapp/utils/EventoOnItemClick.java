@@ -1,4 +1,4 @@
-package com.tecnologias.uniagustapp;
+package com.tecnologias.uniagustapp.utils;
 
 /**
  * Created by ivan.lobelo on 10/18/2017.

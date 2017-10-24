@@ -24,5 +24,4 @@ public class MenuCategoriaViewHolder extends GroupViewHolder {
     public void setCategoriaName(String name){
         categoriaTitle.setText(name);
     }
-
 }
