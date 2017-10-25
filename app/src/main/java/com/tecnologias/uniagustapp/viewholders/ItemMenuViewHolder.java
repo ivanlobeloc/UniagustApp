@@ -25,7 +25,7 @@ public class ItemMenuViewHolder extends ChildViewHolder implements View.OnClickL
         icono = (ImageView)itemView.findViewById(R.id.list_item_scate_icon);
 
         this.listener = listener; // *
-        itemView.setOnClickListener(this); // *
+        itemView.setOnClickListener(this);
     }
 
     public void setItemName(String name){
@@ -37,5 +37,7 @@ public class ItemMenuViewHolder extends ChildViewHolder implements View.OnClickL
     }
 
     @Override // *
-    public void onClick(View v) {listener.onItemClick(getAdapterPosition()); } // *
+    public void onClick(View v) {
+        listener.onItemClick(getAdapterPosition());
+    } // *
 }

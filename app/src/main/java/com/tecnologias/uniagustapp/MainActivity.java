@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity
         getCateg();
         mAdapter = new MenuAdapter(menuCategorias);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
-        mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setAdapter(mAdapter);//*
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -138,42 +138,42 @@ public class MainActivity extends AppCompatActivity
 
                     //REDES SOCIALES
 
-                    case 11:
+                    case 12:
                         Toast.makeText(MainActivity.this, "Youtube "+posicion, Toast.LENGTH_SHORT).show();
                         fragmentTransaction.replace(R.id.content_main, youtube).commit();
                         break;
 
-                    case 12:
+                    case 13:
                         Toast.makeText(MainActivity.this, "Twitter "+posicion, Toast.LENGTH_SHORT).show();
                         fragmentTransaction.replace(R.id.content_main, twitter).commit();
                         break;
 
-                    case 13:
+                    case 14:
                         Toast.makeText(MainActivity.this, "Facebook "+posicion, Toast.LENGTH_SHORT).show();
                         fragmentTransaction.replace(R.id.content_main, facebook).commit();
                         break;
 
-                    case 14:
+                    case 15:
                         Toast.makeText(MainActivity.this, "Flickr "+posicion, Toast.LENGTH_SHORT).show();
                         fragmentTransaction.replace(R.id.content_main, flickr).commit();
                         break;
 
-                    case 15:
+                    case 16:
                         Toast.makeText(MainActivity.this, "Google + "+posicion, Toast.LENGTH_SHORT).show();
                         fragmentTransaction.replace(R.id.content_main, googlep).commit();
                         break;
 
-                    case 16:
+                    case 17:
                         Toast.makeText(MainActivity.this, "Instagram "+posicion, Toast.LENGTH_SHORT).show();
                         fragmentTransaction.replace(R.id.content_main, instagram).commit();
                         break;
 
-                    case 17:
+                    case 18:
                         Toast.makeText(MainActivity.this, "LinkedIn "+posicion, Toast.LENGTH_SHORT).show();
                         fragmentTransaction.replace(R.id.content_main, linkedin).commit();
                         break;
 
-                }
+                }//*
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                 drawer.closeDrawer(GravityCompat.START);//permite que se oculte el DrawerLayout una vez seleccionado un item del menu
             }
@@ -182,9 +182,9 @@ public class MainActivity extends AppCompatActivity
 
     public void getCateg() {
 
-        menuCategorias = new ArrayList<>(12);
+        menuCategorias = new ArrayList<>();
 
-        List<ItemMenu> itemMenus1 = new ArrayList<>(5);
+        List<ItemMenu> itemMenus1 = new ArrayList<>();
         itemMenus1.add(new ItemMenu("Home", R.mipmap.home)); // comentarié los demás submenus para ensayar solo con uno
         itemMenus1.add(new ItemMenu("Biblioteca", R.mipmap.biblioteca));
         itemMenus1.add(new ItemMenu("EduVirtual", R.mipmap.eduvirtual));
@@ -192,13 +192,14 @@ public class MainActivity extends AppCompatActivity
         itemMenus1.add(new ItemMenu("Preguntas", R.mipmap.preguntasf));
         menuCategorias.add(new MenuCategoria("Portal", itemMenus1));
 
-        List<ItemMenu> itemMenus2 = new ArrayList<>(3);
+        List<ItemMenu> itemMenus2 = new ArrayList<>();
+        itemMenus2.add(new ItemMenu("Siga",R.mipmap.siga));
         itemMenus2.add(new ItemMenu("Siga",R.mipmap.siga));
         itemMenus2.add(new ItemMenu("Apoyo a la Presencialidad",R.mipmap.eduvirtual));
         itemMenus2.add(new ItemMenu("Virtualidad",R.mipmap.eduvirtual));
         menuCategorias.add(new MenuCategoria("Plataformas", itemMenus2));
 
-        List<ItemMenu> itemMenus3 = new ArrayList<>(7);
+        List<ItemMenu> itemMenus3 = new ArrayList<>();
         itemMenus3.add(new ItemMenu("Youtube",R.mipmap.youtube));
         itemMenus3.add(new ItemMenu("Twitter",R.mipmap.twitter));
         itemMenus3.add(new ItemMenu("Facebook",R.mipmap.facebook));
@@ -207,6 +208,7 @@ public class MainActivity extends AppCompatActivity
         itemMenus3.add(new ItemMenu("Instagram",R.mipmap.instagram));
         itemMenus3.add(new ItemMenu("LinkedIn",R.mipmap.linkedin));
         menuCategorias.add(new MenuCategoria("Redes Sociales", itemMenus3));
+
     }
 
     @Override
