@@ -41,3 +41,8 @@ public class ItemMenuViewHolder extends ChildViewHolder implements View.OnClickL
         listener.onItemClick(getAdapterPosition());
     } // *
 }
+/*
+* if(posicion != RecyclerView.NO_POSITION){
+
+                }
+* */

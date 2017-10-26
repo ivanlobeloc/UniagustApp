@@ -12,7 +12,7 @@ import com.thoughtbot.expandablerecyclerview.viewholders.GroupViewHolder;
  * Created by Brad on 12/18/2016.
  */
 
-public class MenuCategoriaViewHolder extends GroupViewHolder {
+public class MenuCategoriaViewHolder extends GroupViewHolder  {
 
     private TextView categoriaTitle;
 

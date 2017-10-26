@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity
                     //REDES SOCIALES
 
                     case 12:
-                        Toast.makeText(MainActivity.this, "Youtube "+posicion, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Youtube "+posicion , Toast.LENGTH_SHORT).show();
                         fragmentTransaction.replace(R.id.content_main, youtube).commit();
                         break;
 
@@ -173,6 +173,18 @@ public class MainActivity extends AppCompatActivity
                         fragmentTransaction.replace(R.id.content_main, linkedin).commit();
                         break;
 
+                    case 20:
+                        Toast.makeText(MainActivity.this, "Tour "+posicion, Toast.LENGTH_SHORT).show();
+                        Intent i3 = new Intent(MainActivity.this, Activity_Tour360.class);
+                        startActivity(i3);
+                        break;
+
+                    case 21:
+                        Toast.makeText(MainActivity.this, "Tour "+posicion, Toast.LENGTH_SHORT).show();
+                        Intent i4 = new Intent(MainActivity.this, Activity_Entretenimiento.class);
+                        startActivity(i4);
+                        break;
+
                 }//*
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                 drawer.closeDrawer(GravityCompat.START);//permite que se oculte el DrawerLayout una vez seleccionado un item del menu
@@ -194,7 +206,6 @@ public class MainActivity extends AppCompatActivity
 
         List<ItemMenu> itemMenus2 = new ArrayList<>();
         itemMenus2.add(new ItemMenu("Siga",R.mipmap.siga));
-        itemMenus2.add(new ItemMenu("Siga",R.mipmap.siga));
         itemMenus2.add(new ItemMenu("Apoyo a la Presencialidad",R.mipmap.eduvirtual));
         itemMenus2.add(new ItemMenu("Virtualidad",R.mipmap.eduvirtual));
         menuCategorias.add(new MenuCategoria("Plataformas", itemMenus2));
@@ -209,6 +220,10 @@ public class MainActivity extends AppCompatActivity
         itemMenus3.add(new ItemMenu("LinkedIn",R.mipmap.linkedin));
         menuCategorias.add(new MenuCategoria("Redes Sociales", itemMenus3));
 
+        List<ItemMenu> itemMenus4 = new ArrayList<>();
+        itemMenus4.add(new ItemMenu("Tour 360",R.mipmap.tour));
+        itemMenus4.add(new ItemMenu("Juegos",R.mipmap.eduvirtual));
+        menuCategorias.add(new MenuCategoria("Entretenimiento", itemMenus4));
     }
 
     @Override
