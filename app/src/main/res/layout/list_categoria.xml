@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="30dp"
+    android:layout_height="35dp"
     android:layout_marginBottom="2dp"
     android:layout_marginTop="2dp"
     android:orientation="horizontal"
-    android:background="#6298e2">
+    android:background="#ccaa4c">
 
     <TextView
         android:id="@+id/list_item_cate_name"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="10dp"
-        android:textColor="#02400b"
+        android:textColor="#000f61"
         android:textStyle="bold"
         android:layout_weight="1"
         android:text="Categoria" />
