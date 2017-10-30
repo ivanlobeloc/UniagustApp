@@ -44,7 +44,7 @@ public class AdaptadorDirectorio extends BaseAdapter {
         View vista = convertView;
 
         LayoutInflater inflate = LayoutInflater.from(contexto);
-        vista = inflate.inflate(R.layout.listItem_directorio,null);
+        vista = inflate.inflate(R.layout.listitem_directorio,null);
 
         ImageView imagen =(ImageView)vista.findViewById(R.id.imageView);
         TextView titulo = (TextView)vista.findViewById(R.id.titulo);
