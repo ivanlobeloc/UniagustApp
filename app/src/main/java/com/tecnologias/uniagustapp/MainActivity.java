@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Biblioteca;
@@ -40,11 +41,15 @@ public class MainActivity extends AppCompatActivity
     implements Fragment_Biblioteca.OnFragmentInteractionListener, Fragment_Directorio.OnFragmentInteractionListener, Fragment_Home.OnFragmentInteractionListener,
         Fragment_Preguntas.OnFragmentInteractionListener, Fragment_EVU.OnFragmentInteractionListener {
 
-    //ExpandableListView
+    //ExpandableListView para el menú
     private ExpandableListView listView;
     private ExpandableListAdapter listAdapter;
     private List<String> listDataHeader;
     private HashMap<String,List<ElementoMenu>> listHash;
+
+    //ListView para el directorio
+    ListView listaDatos;
+    ArrayList<DatosDirectorio> Lista;
 
 
     @Override
@@ -69,11 +74,16 @@ public class MainActivity extends AppCompatActivity
         final Fragment instagram = new Fragment_Instagram();
         final Fragment linkedin = new Fragment_LinkedIn();
 
-        //ListView
+        //ExpandableListView para el menú
         listView = (ExpandableListView)findViewById(R.id.ex_lits_menu);
         initData();
         listAdapter = new ExpandableListAdapter(this, listDataHeader,listHash);
         listView.setAdapter(listAdapter);//*
+
+        //ListView para el Directorio
+        listaDatos = (ListView)findViewById(R.id.lstDirectorio);
+        AdaptadorDirectorio miadaptador = new AdaptadorDirectorio(getApplicationContext(),Lista);
+        listaDatos.setAdapter(miadaptador);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
