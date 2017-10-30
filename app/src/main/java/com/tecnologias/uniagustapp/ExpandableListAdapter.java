@@ -95,6 +95,9 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         item_name.setText(childText);
         ImageView item_icon = (ImageView)view.findViewById(R.id.list_item_scate_icon);
         item_icon.setImageResource(childImg);
+
+
+
         return view;
     }
 

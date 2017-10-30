@@ -104,6 +104,7 @@ public class MainActivity extends AppCompatActivity
                 switch(posicion) {
                     case "Home":
                         fragmentTransaction.replace(R.id.content_main, home).commit();
+                        getSupportActionBar().setTitle("Portal Home");//Agrega titulo a ActionBar
                         break;
 
                     case "Biblioteca":
