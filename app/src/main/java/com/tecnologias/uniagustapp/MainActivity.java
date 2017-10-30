@@ -16,7 +16,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Biblioteca;
@@ -25,7 +24,7 @@ import com.tecnologias.uniagustapp.fragmentos.Fragment_EVU;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Facebook;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Flickr;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_GooglePlus;
-import com.tecnologias.uniagustapp.fragmentos.Fragment_Home;
+import com.tecnologias.uniagustapp.fragmentos.Fragment_PortalHome;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Instagram;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_LinkedIn;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Preguntas;
@@ -38,7 +37,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity
-    implements Fragment_Biblioteca.OnFragmentInteractionListener, Fragment_Directorio.OnFragmentInteractionListener, Fragment_Home.OnFragmentInteractionListener,
+    implements Fragment_Biblioteca.OnFragmentInteractionListener, Fragment_Directorio.OnFragmentInteractionListener, Fragment_PortalHome.OnFragmentInteractionListener,
         Fragment_Preguntas.OnFragmentInteractionListener, Fragment_EVU.OnFragmentInteractionListener {
 
     //ExpandableListView para el menú
@@ -60,6 +59,7 @@ public class MainActivity extends AppCompatActivity
 
         //Instancias de cada uno de los fragmentos que se van a cargar en el content main
         final Fragment home = new Fragment_Home();
+        final Fragment p_home = new Fragment_PortalHome();
         final Fragment biblioteca = new Fragment_Biblioteca();
         final Fragment evu = new Fragment_EVU();
         final Fragment directorio = new Fragment_Directorio();
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        if(savedInstanceState == null) {//Permite fijar una pantalla de inicio, en este caso Fragment_Home
+        if(savedInstanceState == null) {//Permite fijar una pantalla de inicio, en este caso Fragment_PortalHome
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.content_main, new Fragment_Home()).commit();
         }
@@ -111,6 +111,11 @@ public class MainActivity extends AppCompatActivity
                 switch(posicion) {
                     case "Home":
                         fragmentTransaction.replace(R.id.content_main, home).commit();
+                        getSupportActionBar().setTitle("Portal Home");//Agrega titulo a ActionBar
+                        break;
+
+                    case "Portal Home":
+                        fragmentTransaction.replace(R.id.content_main, p_home).commit();
                         getSupportActionBar().setTitle("Portal Home");//Agrega titulo a ActionBar
                         break;
 
@@ -204,8 +209,13 @@ public class MainActivity extends AppCompatActivity
         listDataHeader.add("Entretenimiento");
 
         List<ElementoMenu> itemMenus1 = new ArrayList<>();
+
         ElementoMenu elemento = new ElementoMenu("Home", R.mipmap.home);
         itemMenus1.add(elemento);
+
+        elemento = new ElementoMenu("Portal Home", R.mipmap.portal);
+        itemMenus1.add(elemento);
+
         elemento = new ElementoMenu("Biblioteca", R.mipmap.biblioteca);
         itemMenus1.add(elemento);
         elemento = new ElementoMenu("EduVirtual", R.mipmap.eduvirtual);

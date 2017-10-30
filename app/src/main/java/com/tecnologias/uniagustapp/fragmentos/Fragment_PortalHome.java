@@ -17,11 +17,11 @@ import com.tecnologias.uniagustapp.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Fragment_Home extends Fragment {
+public class Fragment_PortalHome extends Fragment {
 
     private static ConnectivityManager manager;
 
-    public Fragment_Home() {
+    public Fragment_PortalHome() {
         // Required empty public constructor
     }
 
@@ -29,7 +29,7 @@ public class Fragment_Home extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_home, container, false);
+        View v = inflater.inflate(R.layout.fragment_portalhome, container, false);
 
         //String url="http://www.uniagustiniana.edu.co/";
         WebView view=(WebView) v.findViewById(R.id.wv_home);

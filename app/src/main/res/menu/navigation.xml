@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/noticias"
+        android:icon="@mipmap/noticias"
+        android:title="Noticias" />
+    <item
+        android:id="@+id/rutas"
+        android:icon="@mipmap/ubicacion"
+        android:title="Rutas" />
+    <item
+        android:id="@+id/cal_aca"
+        android:icon="@mipmap/calendario"
+        android:title="Calendario" />
+    <item
+        android:id="@+id/pqrs"
+        android:icon="@mipmap/pqrs"
+        android:title="PQRS" />
+    <item
+        android:id="@+id/preinscripcion"
+        android:icon="@mipmap/finscripcion"
+        android:title="Pre-Inscripción" />
+</menu>
