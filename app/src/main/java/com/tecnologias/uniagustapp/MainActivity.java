@@ -48,8 +48,7 @@ public class MainActivity extends AppCompatActivity
     private HashMap<String,List<ElementoMenu>> listHash;
 
     //ListView para el directorio
-    ListView listaDatos;
-    ArrayList<DatosDirectorio> Lista;
+
 
 
     @Override
@@ -81,9 +80,7 @@ public class MainActivity extends AppCompatActivity
         listView.setAdapter(listAdapter);//*
 
         //ListView para el Directorio
-        listaDatos = (ListView)findViewById(R.id.lstDirectorio);
-        AdaptadorDirectorio miadaptador = new AdaptadorDirectorio(getApplicationContext(),Lista);
-        listaDatos.setAdapter(miadaptador);
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
