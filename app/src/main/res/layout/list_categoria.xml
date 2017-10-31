@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="#d4ce4e"
+        android:background="#CCA140"
         android:layout_weight="1"></LinearLayout>
 
     <LinearLayout
@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
-            android:textColor="#d4ce4e"
+            android:textColor="#CCA140"
             android:textStyle="bold"
             android:layout_weight="1"
             android:text="Categoria" />
