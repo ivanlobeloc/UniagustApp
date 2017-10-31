@@ -17,7 +17,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
-import android.widget.Toast;
 
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Biblioteca;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Directorio;
@@ -67,6 +66,8 @@ public class MainActivity extends AppCompatActivity
         final Fragment evu = new Fragment_EVU();
         final Fragment directorio = new Fragment_Directorio();
         final Fragment preguntas = new Fragment_Preguntas();
+        //Plataformas
+
         //Redes Sociales
         final Fragment youtube = new Fragment_Youtube();
         final Fragment twitter = new Fragment_Twitter();
@@ -139,7 +140,8 @@ public class MainActivity extends AppCompatActivity
                         break;
 
                     case "Siga":
-                        Toast.makeText(MainActivity.this, "Siga PENDIENTE ", Toast.LENGTH_SHORT).show();
+                        Intent i5 = new Intent(MainActivity.this, Activity_SIGA.class);
+                        startActivity(i5);
                         break;
 
                     case "Apoyo a la Presencialidad":

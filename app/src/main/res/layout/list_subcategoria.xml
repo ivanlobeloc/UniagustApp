@@ -4,26 +4,33 @@
     android:layout_height="35dp"
     android:layout_marginBottom="0.8dp"
     android:layout_marginTop="0.8dp"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:gravity="center"
     android:background="#142a46">
 
-    <ImageView
-        android:id="@+id/list_item_scate_icon"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:src="@mipmap/ic_launcher" />
-
-    <TextView
-        android:id="@+id/list_item_name"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:textSize="15sp"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
-        android:gravity="center_vertical"
-        android:text="SubCategoria" />
+        android:layout_weight="1"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp">
+        <ImageView
+            android:id="@+id/list_item_scate_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@mipmap/ic_launcher" />
+        <TextView
+            android:id="@+id/list_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:text="SubCategoria" />
+    </LinearLayout>
+
 </LinearLayout>

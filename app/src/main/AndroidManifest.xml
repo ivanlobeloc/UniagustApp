@@ -24,7 +24,8 @@
         <activity android:name=".Activity_VirtualApoyo" />
         <activity android:name=".Activity_Virtualidad" />
         <activity android:name=".Activity_Tour360" />
-        <activity android:name=".Activity_Entretenimiento"></activity>
+        <activity android:name=".Activity_Entretenimiento" />
+        <activity android:name=".Activity_SIGA"></activity>
     </application>
 
 </manifest>
