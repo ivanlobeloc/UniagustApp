@@ -3,6 +3,7 @@ package com.tecnologias.uniagustapp;
 import android.content.Intent;
 import android.os.Bundle;
 
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
@@ -24,6 +25,7 @@ import com.tecnologias.uniagustapp.fragmentos.Fragment_EVU;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Facebook;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Flickr;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_GooglePlus;
+import com.tecnologias.uniagustapp.fragmentos.Fragment_Home;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_PortalHome;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Instagram;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_LinkedIn;
@@ -46,7 +48,8 @@ public class MainActivity extends AppCompatActivity
     private List<String> listDataHeader;
     private HashMap<String,List<ElementoMenu>> listHash;
 
-    //ListView para el directorio
+    //M
+    private BottomNavigationView bottomNavigationView;
 
 
 

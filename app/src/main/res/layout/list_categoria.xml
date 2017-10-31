@@ -4,26 +4,42 @@
     android:layout_height="35dp"
     android:layout_marginBottom="2dp"
     android:layout_marginTop="2dp"
-    android:orientation="horizontal"
-    android:background="#ccaa4c">
+    android:orientation="vertical"
+    android:background="#142a46">
 
-    <TextView
-        android:id="@+id/list_item_cate_name"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#d4ce4e"
+        android:layout_weight="1"></LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="10dp"
-        android:textColor="#000f61"
-        android:textStyle="bold"
-        android:layout_weight="1"
-        android:text="Categoria" />
+        android:orientation="horizontal"
+        android:layout_weight="2">
 
-    <ImageView
-        android:id="@+id/list_item_cate_arrow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginRight="16dp"
-        android:src="@drawable/ic_arrow_down" />
+        <TextView
+            android:id="@+id/list_item_cate_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:textColor="#d4ce4e"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:text="Categoria" />
+
+        <ImageView
+            android:id="@+id/list_item_cate_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_arrow_down" />
+
+    </LinearLayout>
+
+
 
 </LinearLayout>
