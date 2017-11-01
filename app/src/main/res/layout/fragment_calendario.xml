@@ -1,0 +1,949 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tecnologias.uniagustapp.fragmentos.Fragment_Calendario">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:id="@+id/table1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0">
+
+            <TableRow
+                android:id="@+id/separador000"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/linea000"
+                    android:layout_width="fill_parent"
+                    android:layout_height="4px"
+                    android:layout_span="5"
+                    android:background="#0b5bab"></FrameLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila00"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="5"
+                    android:background="@color/fila_a"
+                    android:gravity="center"
+                    android:text="INSCRIPCIONES"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/separador00"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/linea00"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3px"
+                    android:layout_span="5"
+                    android:background="#0b5bab"></FrameLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/f1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Apertura de proceso"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Abril 7 a julio 21 /2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/separador0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/linea0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3px"
+                    android:layout_span="5"
+                    android:background="#0b5bab"></FrameLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="5"
+                    android:background="@color/fila_a"
+                    android:gravity="center"
+                    android:text="MATRÍCULAS"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/separador"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/linea"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3px"
+                    android:layout_span="5"
+                    android:background="#0b5bab"></FrameLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Pago anticipado"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Junio 6 al 16 de 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Pago oportuno"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Junio a julio 21 de 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Pago extraordinario"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Julio 22 al 28 de 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Reintegros (homologaciones y equivalencias)"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Julio 22 al 28 de 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Solicitud exámenes de suficiencia"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Julio 14 de 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Presentación exámenes de suficiencia"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Julio 28 de 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila7"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Inducción estudiantes nuevos sede Tagaste"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Julio 26 de 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila8"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Inducción estudiantes nuevos sede Suba"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Julio 27 de 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila9"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Inducción padres de familia sede Tagaste"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Julio 29 de 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Inducción padres de familia sede Suba"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Agosto 5 de 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila11"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Iniciación de clases"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Agosto 1 de 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila12"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Cancelación voluntaria matricula (RE. Art. 20)"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Agosto 1 al 8 de 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila13"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Devolución financiera del 80%"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Julio 31 de 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila14"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Devolución financiera del 50%"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Agosto 1 al 8 de 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila15"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Cancelación y/o adición de asignaturas"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Hasta el 31 de julio 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila16"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Semana Agustiniana"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Agosto 22 al 29"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila17"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Retiro de asignaturas"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Agosto 1 a Sep 15"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila18"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Evaluación Docente"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Octubre 5 al 12 de 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila19"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Finalizaciónd de clases"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Noviembre 24 de 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila20"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Cierre y bloqueo del periodo en sistema"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Diciembre 7 de 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila21"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="5"
+                    android:background="@color/fila_a"
+                    android:gravity="center"
+                    android:text="REGISTRO DE CALIFICIONES EN EL SISTEMA"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila22"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Primer corte"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Sep. 5 al 12 de agosto"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila23"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Segundo corte"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Octubre 13 al 20"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila24"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Tercer corte"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Noviembre 20 al 24"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila25"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="5"
+                    android:background="@color/fila_a"
+                    android:gravity="center"
+                    android:text="OPCIONES DE GRADO"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila26"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Pre-inscripción (Dirección de programa)"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Mayo 12 al 19 / 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila27"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Confirmación de inscripción"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Mayo 22 a junio 8"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila28"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="5"
+                    android:background="@color/fila_a"
+                    android:gravity="center"
+                    android:text="GRADOS"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila29"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Inscripciones en la página institucional"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Julio 4 al 14 de 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila30"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Pago derechos de grado"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Septiembre 8 al 15"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila31"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Ensayo de ceremonia"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Noviembre 11"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila32"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Solicitud por ventanilla"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Noviembre 20 al 30"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila33"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="5"
+                    android:background="@color/fila_a"
+                    android:gravity="center"
+                    android:text="DOCENTES"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila34"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Contratación"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Julio 27 y 28"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila35"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Inducción y reunión general"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Julio 31 de 2017"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila36"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Autoevaluación docente"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Octubre 20 al 27"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila37"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:text="Capacitación docente"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:text="Sep. 23 y Oct. 28"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/fila38"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="3"
+                    android:background="@color/fila_a"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:background="@color/fila_b"
+                    android:textSize="20sp" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+</FrameLayout>
