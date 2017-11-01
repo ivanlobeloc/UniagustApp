@@ -47,11 +47,6 @@ public class MainActivity extends AppCompatActivity
     private List<String> listDataHeader;
     private HashMap<String,List<ElementoMenu>> listHash;
 
-    //M
-    private BottomNavigationView bottomNavigationView;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

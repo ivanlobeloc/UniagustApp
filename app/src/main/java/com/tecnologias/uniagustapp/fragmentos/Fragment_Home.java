@@ -35,10 +35,7 @@ public class Fragment_Home extends Fragment {
         final Fragment calendario = new Fragment_Calendario();
         final Fragment pqrs = new Fragment_PQRS();
         final Fragment preinscrip = new Fragment_Pre_Inscripcion();
-
-        /*
-        final Fragment ubicacion = new Map_Fragment();
-        */
+        final Fragment rutas = new Fragment_Rutas();
 
         BottomNavigationView navigation = (BottomNavigationView) v.findViewById(R.id.navigation);
         navigation.setItemIconTintList(null);//Los iconos del menu Bottom toman su color original
@@ -53,7 +50,7 @@ public class Fragment_Home extends Fragment {
                     fragmentTransaction.replace(R.id.content_main, noticias).commit();
                     ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Noticias");//Agrega titulo a ActionBar
                 } else if (item.getItemId() == R.id.rutas) {
-
+                    fragmentTransaction.replace(R.id.content_main, rutas).commit();
                 } else if (item.getItemId() == R.id.cal_aca) {
                     fragmentTransaction.replace(R.id.content_main, calendario).commit();
                     ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Calendario Académico");//Agrega titulo a ActionBar
