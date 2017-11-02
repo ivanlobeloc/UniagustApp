@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity
                 switch(posicion) {
                     case "Home":
                         fragmentTransaction.replace(R.id.content_main, home).commit();
-                        getSupportActionBar().setTitle("Portal Home");//Agrega titulo a ActionBar
+                        getSupportActionBar().setTitle("Uniagustiniana App");//Agrega titulo a ActionBar
                         break;
 
                     case "Portal Home":
@@ -120,18 +120,22 @@ public class MainActivity extends AppCompatActivity
 
                     case "Biblioteca":
                         fragmentTransaction.replace(R.id.content_main, biblioteca).commit();
+                        getSupportActionBar().setTitle("Biblioteca");//Agrega titulo a ActionBar
                         break;
 
                     case "EduVirtual":
                         fragmentTransaction.replace(R.id.content_main, evu).commit();
+                        getSupportActionBar().setTitle("EVU Home");//Agrega titulo a ActionBar
                         break;
 
                     case "Directorio":
                         fragmentTransaction.replace(R.id.content_main, directorio).commit();
+                        getSupportActionBar().setTitle("Directorio");//Agrega titulo a ActionBar
                         break;
 
                     case "Preguntas":
                         fragmentTransaction.replace(R.id.content_main, preguntas).commit();
+                        getSupportActionBar().setTitle("PQRS");//Agrega titulo a ActionBar
                         break;
 
                     case "Siga":
@@ -151,30 +155,37 @@ public class MainActivity extends AppCompatActivity
 
                     case "Youtube":
                         fragmentTransaction.replace(R.id.content_main, youtube).commit();
+                        getSupportActionBar().setTitle("Youtube");//Agrega titulo a ActionBar
                         break;
 
                     case "Twitter":
                         fragmentTransaction.replace(R.id.content_main, twitter).commit();
+                        getSupportActionBar().setTitle("Twitter");//Agrega titulo a ActionBar
                         break;
 
                     case "Facebook":
                         fragmentTransaction.replace(R.id.content_main, facebook).commit();
+                        getSupportActionBar().setTitle("Facebook");//Agrega titulo a ActionBar
                         break;
 
                     case "Flicker":
                         fragmentTransaction.replace(R.id.content_main, flickr).commit();
+                        getSupportActionBar().setTitle("Flicker");//Agrega titulo a ActionBar
                         break;
 
                     case "Google +":
                         fragmentTransaction.replace(R.id.content_main, googlep).commit();
+                        getSupportActionBar().setTitle("Google +");//Agrega titulo a ActionBar
                         break;
 
                     case "Instagram":
                         fragmentTransaction.replace(R.id.content_main, instagram).commit();
+                        getSupportActionBar().setTitle("Instagram");//Agrega titulo a ActionBar
                         break;
 
                     case "LinkedIn":
                         fragmentTransaction.replace(R.id.content_main, linkedin).commit();
+                        getSupportActionBar().setTitle("LinkedIn");//Agrega titulo a ActionBar
                         break;
 
                     case "Tour 360":

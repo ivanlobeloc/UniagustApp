@@ -2,20 +2,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#eddd76"
+    android:background="#1F2346"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.tecnologias.uniagustapp.fragmentos.Fragment_Home">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="58dp"
-        android:background="#eddd76">
+        android:layout_marginBottom="57dp"
+        android:background="#1F2346">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:srcCompat="@drawable/main03"
             tools:ignore="ContentDescription" />
 
@@ -29,7 +29,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_gravity="bottom"
-        android:background="#202240"
+        android:background="#1F2346"
         app:menu="@menu/navigation" />
 
 </FrameLayout>

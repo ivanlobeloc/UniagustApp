@@ -31,7 +31,6 @@ public class Fragment_PortalHome extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_portalhome, container, false);
 
-        //String url="http://www.uniagustiniana.edu.co/";
         WebView view=(WebView) v.findViewById(R.id.wv_home);
         view.getSettings().setJavaScriptEnabled(true);
         view.setWebViewClient(new WebViewClient());// Agregamos un WebViewCliente, esto permite que se sigan ejecutando los links dentro de este WebView
@@ -40,7 +39,7 @@ public class Fragment_PortalHome extends Fragment {
         if (isOnline(getActivity())) {
             String url="http://www.uniagustiniana.edu.co/";
             view.loadUrl(url);
-            Toast.makeText(getActivity(),"SI hay conexión!",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getActivity(),"SI hay conexión!",Toast.LENGTH_SHORT).show();
         } else {
             view.loadUrl("file:///android_asset/html/pagina_error.html");
             Toast.makeText(getActivity(),"NO hay conexión!",Toast.LENGTH_SHORT).show();
