@@ -16,9 +16,8 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/main03"
+            app:srcCompat="@drawable/img_home1"
             tools:ignore="ContentDescription" />
-
     </LinearLayout>
 
     <android.support.design.widget.BottomNavigationView
@@ -31,5 +30,4 @@
         android:layout_gravity="bottom"
         android:background="#1F2346"
         app:menu="@menu/navigation" />
-
 </FrameLayout>
