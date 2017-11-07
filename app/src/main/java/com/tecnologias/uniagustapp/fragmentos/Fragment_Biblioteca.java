@@ -44,7 +44,6 @@ public class Fragment_Biblioteca extends Fragment {
             //view.loadUrl("file:///android_asset/html/pagina_error.html");
             Toast.makeText(getActivity(),"NO hay conexión!",Toast.LENGTH_SHORT).show();
         }
-
         return v;
     }
 

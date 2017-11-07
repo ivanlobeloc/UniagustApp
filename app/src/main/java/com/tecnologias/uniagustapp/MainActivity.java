@@ -105,6 +105,7 @@ public class MainActivity extends AppCompatActivity
 
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.addToBackStack(null);
 
                 switch(posicion) {
                     case "Home":

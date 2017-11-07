@@ -45,6 +45,7 @@ public class Fragment_Home extends Fragment {
 
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.addToBackStack(null);
 
                 if (item.getItemId() == R.id.noticias) {
                     fragmentTransaction.replace(R.id.content_main, noticias).commit();
@@ -63,7 +64,7 @@ public class Fragment_Home extends Fragment {
                 }
                 return true;
             }
-        });//*
+        });
 
         return v;
     }
