@@ -3,7 +3,6 @@ package com.tecnologias.uniagustapp;
 import android.content.Intent;
 import android.os.Bundle;
 
-import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
@@ -194,7 +193,7 @@ public class MainActivity extends AppCompatActivity
                         break;
 
                     case "Juegos":
-                        Intent i4 = new Intent(MainActivity.this, Activity_Entretenimiento.class);
+                        Intent i4 = new Intent(MainActivity.this, Activity_JuegoMemoria.class);
                         startActivity(i4);
                         break;
 

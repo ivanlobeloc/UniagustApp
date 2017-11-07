@@ -108,7 +108,7 @@
 				frag += '<div class="card" data-id="'+ v.id +'"><div class="inside">\
 				<div class="front"><img src="'+ v.img +'"\
 				alt="'+ v.name +'" /></div>\
-				<div class="back"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/codepen-logo.png"\
+				<div class="back"><img src="http://uniagustiniana.edu.co/images/images-android/Imagenes-juego-01.png"\
 				alt="Codepen" /></div></div>\
 				</div>';
 			});
@@ -119,62 +119,62 @@
 	var cards = [
 		{
 			name: "php",
-			img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/php-logo_1.png",
+			img: "http://uniagustiniana.edu.co/images/images-android/Imagenes-juego-02.png",
 			id: 1,
 		},
 		{
 			name: "css3",
-			img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/css3-logo.png",
+			img: "http://uniagustiniana.edu.co/images/images-android/Imagenes-juego-03.png",
 			id: 2
 		},
 		{
 			name: "html5",
-			img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/html5-logo.png",
+			img: "http://uniagustiniana.edu.co/images/images-android/Imagenes-juego-04.png",
 			id: 3
 		},
 		{
 			name: "jquery",
-			img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/jquery-logo.png",
+			img: "http://uniagustiniana.edu.co/images/images-android/Imagenes-juego-05.png",
 			id: 4
 		}, 
 		{
 			name: "javascript",
-			img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/js-logo.png",
+			img: "http://uniagustiniana.edu.co/images/images-android/Imagenes-juego-06.png",
 			id: 5
 		},
 		{
 			name: "node",
-			img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/nodejs-logo.png",
+			img: "http://uniagustiniana.edu.co/images/images-android/Imagenes-juego-07.png",
 			id: 6
 		},
 		{
 			name: "photoshop",
-			img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/photoshop-logo.png",
+			img: "http://uniagustiniana.edu.co/images/images-android/Imagenes-juego-08.png",
 			id: 7
 		},
 		{
 			name: "python",
-			img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/python-logo.png",
+			img: "http://uniagustiniana.edu.co/images/images-android/Imagenes-juego-09.png",
 			id: 8
 		},
 		{
 			name: "rails",
-			img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/rails-logo.png",
+			img: "http://uniagustiniana.edu.co/images/images-android/Imagenes-juego-10.png",
 			id: 9
 		},
 		{
 			name: "sass",
-			img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/sass-logo.png",
+			img: "http://uniagustiniana.edu.co/images/images-android/Imagenes-juego-11.png",
 			id: 10
 		},
 		{
 			name: "sublime",
-			img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/sublime-logo.png",
+			img: "http://uniagustiniana.edu.co/images/images-android/Imagenes-juego-12.png",
 			id: 11
 		},
 		{
 			name: "wordpress",
-			img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/wordpress-logo.png",
+			img: "http://uniagustiniana.edu.co/images/images-android/Imagenes-juego-13.png",
 			id: 12
 		},
 	];

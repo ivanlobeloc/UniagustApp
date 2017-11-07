@@ -5,13 +5,13 @@ import android.os.Bundle;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 
-public class Activity_Entretenimiento extends AppCompatActivity {
+public class Activity_JuegoMemoria extends AppCompatActivity {
     private WebView wv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_entretenimiento);
+        setContentView(R.layout.activity_juego_memoria);
 
         wv=(WebView)this.findViewById(R.id.wv_entretenimiento);
         wv.getSettings().setJavaScriptEnabled(true);

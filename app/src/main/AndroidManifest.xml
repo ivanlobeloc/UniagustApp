@@ -25,7 +25,7 @@
         <activity android:name=".Activity_VirtualApoyo" />
         <activity android:name=".Activity_Virtualidad" />
         <activity android:name=".Activity_Tour360" />
-        <activity android:name=".Activity_Entretenimiento" />
+        <activity android:name=".Activity_JuegoMemoria" />
         <activity android:name=".Activity_SIGA" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
