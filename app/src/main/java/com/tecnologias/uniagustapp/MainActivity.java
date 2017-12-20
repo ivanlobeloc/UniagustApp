@@ -24,6 +24,7 @@ import com.tecnologias.uniagustapp.fragmentos.Fragment_Facebook;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Flickr;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_GooglePlus;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Home;
+import com.tecnologias.uniagustapp.fragmentos.Fragment_Juegos;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_PortalHome;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Instagram;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_LinkedIn;
@@ -70,6 +71,7 @@ public class MainActivity extends AppCompatActivity
         final Fragment googlep = new Fragment_GooglePlus();
         final Fragment instagram = new Fragment_Instagram();
         final Fragment linkedin = new Fragment_LinkedIn();
+        final Fragment juegos = new Fragment_Juegos();
 
         //ExpandableListView para el menú
         listView = (ExpandableListView)findViewById(R.id.ex_lits_menu);
@@ -89,52 +91,51 @@ public class MainActivity extends AppCompatActivity
         if(savedInstanceState == null) {//Permite fijar una pantalla de inicio, en este caso Fragment_PortalHome
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.content_main, new Fragment_Home()).commit();
+            fragmentManager.popBackStack();
         }
 
         //listener
         listView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-                //Toast.makeText(MainActivity.this, grupo+" -grupo", Toast.LENGTH_SHORT).show();
-                //Toast.makeText(MainActivity.this, listDataHeader.get(groupPosition), Toast.LENGTH_SHORT).show();
-                //Toast.makeText(MainActivity.this, posicion+" - grupo hijo", Toast.LENGTH_SHORT).show();
-                //Toast.makeText(MainActivity.this, listHash.get(listDataHeader.get(groupPosition)).get(childPosition).getTitulo(), Toast.LENGTH_SHORT).show();
 
                 String posicion;
                 posicion = listHash.get(listDataHeader.get(groupPosition)).get(childPosition).getTitulo();
 
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.addToBackStack(null);
+                //fragmentTransaction.addToBackStack(null);
+                //fragmentManager.popBackStack();
+
 
                 switch(posicion) {
                     case "Home":
-                        fragmentTransaction.replace(R.id.content_main, home).commit();
+                        fragmentTransaction.replace(R.id.content_main, home).addToBackStack(null).commit();
                         getSupportActionBar().setTitle("Uniagustiniana App");//Agrega titulo a ActionBar
                         break;
 
                     case "Portal Home":
-                        fragmentTransaction.replace(R.id.content_main, p_home).commit();
+                        fragmentTransaction.replace(R.id.content_main, p_home).addToBackStack(null).commit();
                         getSupportActionBar().setTitle("Portal Home");//Agrega titulo a ActionBar
                         break;
 
                     case "Biblioteca":
-                        fragmentTransaction.replace(R.id.content_main, biblioteca).commit();
+                        fragmentTransaction.replace(R.id.content_main, biblioteca).addToBackStack(null).commit();
                         getSupportActionBar().setTitle("Biblioteca");//Agrega titulo a ActionBar
                         break;
 
                     case "EduVirtual":
-                        fragmentTransaction.replace(R.id.content_main, evu).commit();
+                        fragmentTransaction.replace(R.id.content_main, evu).addToBackStack(null).commit();
                         getSupportActionBar().setTitle("EVU Home");//Agrega titulo a ActionBar
                         break;
 
                     case "Directorio":
-                        fragmentTransaction.replace(R.id.content_main, directorio).commit();
+                        fragmentTransaction.replace(R.id.content_main, directorio).addToBackStack(null).commit();
                         getSupportActionBar().setTitle("Directorio");//Agrega titulo a ActionBar
                         break;
 
                     case "Preguntas":
-                        fragmentTransaction.replace(R.id.content_main, preguntas).commit();
+                        fragmentTransaction.replace(R.id.content_main, preguntas).addToBackStack(null).commit();
                         getSupportActionBar().setTitle("PQRS");//Agrega titulo a ActionBar
                         break;
 
@@ -154,37 +155,37 @@ public class MainActivity extends AppCompatActivity
                         break;
 
                     case "Youtube":
-                        fragmentTransaction.replace(R.id.content_main, youtube).commit();
+                        fragmentTransaction.replace(R.id.content_main, youtube).addToBackStack(null).commit();
                         getSupportActionBar().setTitle("Youtube");//Agrega titulo a ActionBar
                         break;
 
                     case "Twitter":
-                        fragmentTransaction.replace(R.id.content_main, twitter).commit();
+                        fragmentTransaction.replace(R.id.content_main, twitter).addToBackStack(null).commit();
                         getSupportActionBar().setTitle("Twitter");//Agrega titulo a ActionBar
                         break;
 
                     case "Facebook":
-                        fragmentTransaction.replace(R.id.content_main, facebook).commit();
+                        fragmentTransaction.replace(R.id.content_main, facebook).addToBackStack(null).commit();
                         getSupportActionBar().setTitle("Facebook");//Agrega titulo a ActionBar
                         break;
 
                     case "Flicker":
-                        fragmentTransaction.replace(R.id.content_main, flickr).commit();
+                        fragmentTransaction.replace(R.id.content_main, flickr).addToBackStack(null).commit();
                         getSupportActionBar().setTitle("Flicker");//Agrega titulo a ActionBar
                         break;
 
                     case "Google +":
-                        fragmentTransaction.replace(R.id.content_main, googlep).commit();
+                        fragmentTransaction.replace(R.id.content_main, googlep).addToBackStack(null).commit();
                         getSupportActionBar().setTitle("Google +");//Agrega titulo a ActionBar
                         break;
 
                     case "Instagram":
-                        fragmentTransaction.replace(R.id.content_main, instagram).commit();
+                        fragmentTransaction.replace(R.id.content_main, instagram).addToBackStack(null).commit();
                         getSupportActionBar().setTitle("Instagram");//Agrega titulo a ActionBar
                         break;
 
                     case "LinkedIn":
-                        fragmentTransaction.replace(R.id.content_main, linkedin).commit();
+                        fragmentTransaction.replace(R.id.content_main, linkedin).addToBackStack(null).commit();
                         getSupportActionBar().setTitle("LinkedIn");//Agrega titulo a ActionBar
                         break;
 
@@ -194,8 +195,10 @@ public class MainActivity extends AppCompatActivity
                         break;
 
                     case "Juegos":
-                        Intent i4 = new Intent(MainActivity.this, Activity_JuegoMemoria.class);
-                        startActivity(i4);
+                        fragmentTransaction.replace(R.id.content_main, juegos).addToBackStack(null).commit();
+                        getSupportActionBar().setTitle("Juegos");//Agrega titulo a ActionBar
+                        //Intent i4 = new Intent(MainActivity.this, Activity_JuegoMemoria.class);
+                        //startActivity(i4);
                         break;
 
                 }

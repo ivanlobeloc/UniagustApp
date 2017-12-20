@@ -16,4 +16,5 @@
 
     <!-- TODO: SITP: A continuación textos layout SITP -->
     <string name="d7">L-S |   04:00AM - 11:00 PM\nD-F |   05:00AM - 11:00 PM</string>
+    <string name="imagen_cabecera_nav_header">Imagen cabecera nav header</string>
 </resources>

@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.tecnologias.uniagustapp.Activity_JuegoMemoria">
+    tools:context="com.tecnologias.uniagustapp.Activity_JuegoAjedrez">
 
     <WebView
-        android:id="@+id/wv_juego01"
+        android:id="@+id/wv_juego03"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 </FrameLayout>
