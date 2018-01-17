@@ -115,6 +115,7 @@ public class MainActivity extends AppCompatActivity
                         break;
 
                     case "Portal Home":
+                        fragmentTransaction.remove(home);
                         fragmentTransaction.replace(R.id.content_main, p_home).addToBackStack(null).commit();
                         getSupportActionBar().setTitle("Portal Home");//Agrega titulo a ActionBar
                         break;

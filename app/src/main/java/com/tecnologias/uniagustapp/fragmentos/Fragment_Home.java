@@ -21,7 +21,6 @@ import java.util.TimerTask;
 
 import static com.google.android.gms.internal.zzagz.runOnUiThread;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -56,10 +55,8 @@ public class Fragment_Home extends Fragment {
         adapter = new CustomSwipeAadapter(getContext());
         viewPager.setAdapter(adapter);
 
-
         Timer timer = new Timer();
         timer.schedule(new MyTimerTask(), 3000, 4000);
-
         */
 
         //Instancias para los botones del menú
@@ -84,6 +81,7 @@ public class Fragment_Home extends Fragment {
                     ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Noticias");//Agrega titulo a ActionBar
                 } else if (item.getItemId() == R.id.rutas) {
                     fragmentTransaction.replace(R.id.content_main, rutas).commit();
+                    ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Rutas");//Agrega titulo a ActionBar
                 } else if (item.getItemId() == R.id.cal_aca) {
                     fragmentTransaction.replace(R.id.content_main, calendario).commit();
                     ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Calendario Académico");//Agrega titulo a ActionBar
