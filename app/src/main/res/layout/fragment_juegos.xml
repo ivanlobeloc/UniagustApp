@@ -15,14 +15,14 @@
             android:id="@+id/imgBtn01"
             android:layout_width="350dp"
             android:layout_height="70dp"
-            android:paddingRight="280dp"
-            android:paddingLeft="0dp"
+            android:paddingEnd="280dp"
+            android:paddingStart="0dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="53dp"
             android:background="@drawable/rounded"
             android:gravity="center"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher" android:contentDescription="@string/icono" />
 
 
         <ImageButton
@@ -34,9 +34,9 @@
             android:layout_marginTop="90dp"
             android:background="@drawable/rounded"
             android:gravity="center"
-            android:paddingLeft="0dp"
-            android:paddingRight="280dp"
-            android:src="@mipmap/ic_launcher" />
+            android:paddingStart="0dp"
+            android:paddingEnd="280dp"
+            android:src="@mipmap/ic_launcher" android:contentDescription="@string/icono" />
 
         <ImageButton
             android:id="@+id/imgBtn03"
@@ -47,9 +47,9 @@
             android:layout_marginTop="90dp"
             android:background="@drawable/rounded"
             android:gravity="center"
-            android:paddingLeft="0dp"
-            android:paddingRight="280dp"
-            android:src="@mipmap/ic_launcher" />
+            android:paddingStart="0dp"
+            android:paddingEnd="280dp"
+            android:src="@mipmap/ic_launcher" android:contentDescription="@string/icono" />
 
         <TextView
             android:id="@+id/textView"
@@ -62,9 +62,9 @@
             android:layout_marginTop="20dp"
             android:clickable="false"
             android:ems="10"
-            android:text="Memory Game"
+            android:text="@string/memory_game"
             android:textColor="#a9b12f"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold|italic"
             android:typeface="serif"
             />
@@ -78,25 +78,9 @@
             android:layout_marginBottom="24dp"
             android:clickable="false"
             android:ems="10"
-            android:text="Sudoku"
+            android:text="@string/sudoku"
             android:textColor="#a9b12f"
-            android:textSize="20dp"
-            android:textStyle="bold|italic"
-            android:typeface="serif"
-            />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/imgBtn03"
-            android:layout_alignStart="@+id/textView2"
-            android:layout_marginBottom="21dp"
-            android:clickable="false"
-            android:ems="10"
-            android:text="Ajedréz"
-            android:textColor="#a9b12f"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold|italic"
             android:typeface="serif"
             />
