@@ -25,8 +25,10 @@ public class Fragment_Pre_Inscripcion extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_pre_inscripcion, container, false);
 
-        //String url="http://siga.uniagustiniana.edu.co///paquetes/admision/preinscripciondeadmision/index_publico.php?accion=Nuevo";
-        String url="https://siga.uniagustiniana.edu.co/paquetes/modulo_preinscripcion/app.php/preinscripcion";
+        //http://siga.uniagustiniana.edu.co///paquetes/admision/preinscripciondeadmision/index_publico.php?accion=Nuevo
+        //https://siga.uniagustiniana.edu.co/paquetes/modulo_preinscripcion/app.php/preinscripcion
+        //https://docs.google.com/forms/d/e/1FAIpQLSc-gU1AD33bUgeR5otUKgrzZKZpNO7hTB3fhfe6t3YnsKZb-g/viewform?c=0&w=1
+        String url="https://docs.google.com/forms/d/e/1FAIpQLSc-gU1AD33bUgeR5otUKgrzZKZpNO7hTB3fhfe6t3YnsKZb-g/viewform?c=0&w=1";
         WebView view=(WebView) v.findViewById(R.id.wv_preinscripcion);
         view.getSettings().setJavaScriptEnabled(true);
         view.loadUrl(url);

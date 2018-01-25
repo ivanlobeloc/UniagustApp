@@ -12,8 +12,8 @@
         <fragment
             android:id="@+id/map"
             android:name="com.google.android.gms.maps.SupportMapFragment"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"></fragment>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
@@ -23,48 +23,52 @@
         android:layout_margin="3dp"
         android:orientation="vertical">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:gravity="center"
-            android:text="Rutas Sitp Norte - Sur"
-            android:textColor="#130f54"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:gravity="center"
-            android:text="Paradero 349A07 - Uniagustiniana"
-            android:textColor="#130f54"
-            android:textSize="16sp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:gravity="center"
-            android:text="Av. C. de Cali - Cl. 11 A"
-            android:textColor="#130f54"
-            android:textSize="14sp" />
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Rutas Sitp Norte - Sur"
+                android:textColor="#130f54"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Paradero 349A07 - Uniagustiniana"
+                android:textColor="#130f54"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Av. C. de Cali - Cl. 11 A"
+                android:textColor="#130f54"
+                android:textSize="14sp" />
+
+        </LinearLayout>
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#a4d4e1">
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <!-- Listado de rutas que pasan frente a la U -->
-
-
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp">
+
                     <ImageView
                         android:id="@+id/imageView"
                         android:layout_width="wrap_content"
@@ -73,8 +77,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
                         android:layout_marginTop="2dp"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
@@ -104,6 +108,7 @@
                         android:textSize="14sp"
                         android:textColor="#282b87" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -117,8 +122,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
                         android:layout_marginTop="2dp"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
@@ -148,6 +153,7 @@
                         android:textSize="14sp"
                         android:textColor="#282b87" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -160,8 +166,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
                         android:layout_marginTop="2dp"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
@@ -289,8 +295,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
                         android:layout_marginTop="2dp"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
@@ -320,6 +326,7 @@
                         android:textSize="14sp"
                         android:textColor="#282b87" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -332,8 +339,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
                         android:layout_marginTop="2dp"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
@@ -363,6 +370,7 @@
                         android:textSize="14sp"
                         android:textColor="#282b87" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -375,8 +383,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
                         android:layout_marginTop="2dp"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
@@ -406,6 +414,7 @@
                         android:textSize="14sp"
                         android:textColor="#282b87" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -418,8 +427,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
                         android:layout_marginTop="2dp"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
@@ -449,6 +458,7 @@
                         android:textSize="14sp"
                         android:textColor="#282b87" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -461,8 +471,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
                         android:layout_marginTop="2dp"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
@@ -492,6 +502,7 @@
                         android:textSize="14sp"
                         android:textColor="#282b87" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -504,8 +515,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
                         android:layout_marginTop="2dp"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
@@ -547,8 +558,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
                         android:layout_marginTop="2dp"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
@@ -590,8 +601,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
                         android:layout_marginTop="2dp"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
@@ -621,6 +632,7 @@
                         android:textSize="14sp"
                         android:textColor="#282b87" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -633,8 +645,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
                         android:layout_marginTop="2dp"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
@@ -664,6 +676,7 @@
                         android:textSize="14sp"
                         android:textColor="#282b87" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -676,8 +689,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="4dp"
                         android:layout_marginTop="2dp"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
@@ -707,25 +720,10 @@
                         android:textSize="14sp"
                         android:textColor="#282b87" />
                 </RelativeLayout>
-                <!-- Dos textos que no se ven, para generar espacios -->
+                <!-- Una caja de texto vacía, para generar espacios -->
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:text="7: Palmitas - Consuelo"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="#a4d4e1"
-                    android:textStyle="bold"
-                    android:textSize="30sp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:text="7: Palmitas - Consuelo"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="#a4d4e1"
-                    android:textStyle="bold"
-                    android:textSize="30sp" />
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
 
             </LinearLayout>
         </ScrollView>
