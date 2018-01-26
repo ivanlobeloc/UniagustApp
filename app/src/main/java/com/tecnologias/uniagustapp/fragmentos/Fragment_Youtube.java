@@ -35,15 +35,6 @@ public class Fragment_Youtube extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_youtube, container, false);
 
-        /*
-        iWebView = (WebView) v.findViewById(R.id.wv_youtube);
-        iWebView.loadUrl("https://www.youtube.com/user/Uniagustiniana");
-        // Enable Javascript
-        WebSettings webSettings = iWebView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        // Force links and redirects to open in the WebView instead of in a browser
-        iWebView.setWebViewClient(new WebViewClient());
-        */
         WebView view=(WebView) v.findViewById(R.id.wv_youtube);
         view.getSettings().setJavaScriptEnabled(true);
         view.setWebViewClient(new WebViewClient());// Agregamos un WebViewCliente, esto permite que se sigan ejecutando los links dentro de este WebView

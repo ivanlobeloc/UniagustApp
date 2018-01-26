@@ -50,14 +50,6 @@ public class Fragment_Home extends Fragment {
             Timer timer = new Timer();
             timer.schedule(new MyTimerTask(), 3000, 4000);
         }
-        /*
-        viewPager = (ViewPager)v.findViewById(R.id.view_pager);
-        adapter = new CustomSwipeAadapter(getContext());
-        viewPager.setAdapter(adapter);
-
-        Timer timer = new Timer();
-        timer.schedule(new MyTimerTask(), 3000, 4000);
-        */
 
         //Instancias para los botones del menú
         final Fragment noticias = new Fragment_Noticias();
@@ -123,34 +115,9 @@ public class Fragment_Home extends Fragment {
             });
 
            }
-
         }
     }
 
-    /*
-    public class MyTimerTask extends TimerTask {
-
-        @Override
-        public void run() {
-            getActivity().runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-
-                    if(viewPager.getCurrentItem()==0){
-                        viewPager.setCurrentItem(1);
-                        //viewPager.setCurrentItem(1, true);
-                    }else if(viewPager.getCurrentItem()==1){
-                        viewPager.setCurrentItem(2);
-                        //viewPager.setCurrentItem(2, true);
-                    }else if(viewPager.getCurrentItem()==2){
-                        viewPager.setCurrentItem(0);
-                        //viewPager.setCurrentItem(0, true);
-                    }
-                }
-            });
-        }
-    }
-    */
     private FragmentManager getSupportFragmentManager() {
         return getFragmentManager();
     }

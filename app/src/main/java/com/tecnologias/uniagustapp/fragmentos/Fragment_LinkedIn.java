@@ -28,22 +28,12 @@ public class Fragment_LinkedIn extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_linked_in, container, false);
 
-        /*
-        iWebView = (WebView) v.findViewById(R.id.wv_linkedin);
-        iWebView.loadUrl("http://bit.ly/2cXMF99");
-        // Enable Javascript
-        WebSettings webSettings = iWebView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        // Force links and redirects to open in the WebView instead of in a browser
-        iWebView.setWebViewClient(new WebViewClient());
-        */
         WebView view=(WebView) v.findViewById(R.id.wv_linkedin);
         view.getSettings().setJavaScriptEnabled(true);
         view.setWebViewClient(new WebViewClient());// Agregamos un WebViewCliente, esto permite que se sigan ejecutando los links dentro de este WebView

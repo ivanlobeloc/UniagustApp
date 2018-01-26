@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.tecnologias.uniagustapp.Activity_JuegoAjedrez;
 import com.tecnologias.uniagustapp.Activity_JuegoMemoria;
 import com.tecnologias.uniagustapp.Activity_JuegoSudoku;
 import com.tecnologias.uniagustapp.R;

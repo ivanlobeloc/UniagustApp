@@ -81,7 +81,6 @@ public class MainActivity extends AppCompatActivity
 
         //ListView para el Directorio
 
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -104,9 +103,6 @@ public class MainActivity extends AppCompatActivity
 
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                //fragmentTransaction.addToBackStack(null);
-                //fragmentManager.popBackStack();
-
 
                 switch(posicion) {
                     case "Home":
@@ -245,7 +241,7 @@ public class MainActivity extends AppCompatActivity
         itemMenus2.add(elemento);
         elemento = new ElementoMenu("Apoyo a la Presencialidad", R.mipmap.eduvirtual);
         itemMenus2.add(elemento);
-        elemento = new ElementoMenu("Virtualidad", R.mipmap.eduvirtual);
+        elemento = new ElementoMenu("Programas Virtuales", R.mipmap.eduvirtual);
         itemMenus2.add(elemento);
 
         List<ElementoMenu> itemMenus3 = new ArrayList<>();

@@ -43,7 +43,6 @@ public class Fragment_Rutas extends Fragment implements OnMapReadyCallback {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
     }
 
     @Override//acercamiento

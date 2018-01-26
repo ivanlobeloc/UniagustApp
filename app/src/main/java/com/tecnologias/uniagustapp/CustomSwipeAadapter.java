@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 
 public class CustomSwipeAadapter extends PagerAdapter {
 
-    private int[] image_resource = {R.drawable.main03,R.drawable.img_suba,R.drawable.img_tagaste};
+    private int[] image_resource = {R.drawable.img_portada,R.drawable.img_suba,R.drawable.img_tagaste};
     private Context context;
     private LayoutInflater layoutInflater;
 
@@ -38,10 +38,8 @@ public class CustomSwipeAadapter extends PagerAdapter {
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View item_view = layoutInflater.inflate(R.layout.swipe_layout,container,false);
         ImageView imageView = (ImageView) item_view.findViewById(R.id.image_view);
-        //TextView textView = (TextView) item_view.findViewById(R.id.image_count);
 
         imageView.setImageResource(image_resource[position]);
-        //textView.setText("Imagen : "+(position+1));
         container.addView(item_view);
 
         return item_view;

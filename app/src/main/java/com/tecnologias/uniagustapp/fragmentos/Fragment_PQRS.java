@@ -33,7 +33,6 @@ public class Fragment_PQRS extends Fragment {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_pqrs, container, false);
 
-        //String url="http://www.uniagustiniana.edu.co/servicio-al-cliente-uniagustiniana";
         WebView view=(WebView) v.findViewById(R.id.wv_pqrs);
         view.getSettings().setJavaScriptEnabled(true);
         view.setWebViewClient(new WebViewClient());// Agregamos un WebViewCliente, esto permite que se sigan ejecutando los links dentro de este WebView

@@ -36,15 +36,6 @@ public class Fragment_Twitter extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_twitter, container, false);
 
-        /*
-        iWebView = (WebView) v.findViewById(R.id.wv_twitter);
-        iWebView.loadUrl("https://twitter.com/UniagustOficial/");
-        // Enable Javascript
-        WebSettings webSettings = iWebView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        // Force links and redirects to open in the WebView instead of in a browser
-        iWebView.setWebViewClient(new WebViewClient());
-        */
         WebView view=(WebView) v.findViewById(R.id.wv_twitter);
         view.getSettings().setJavaScriptEnabled(true);
         view.setWebViewClient(new WebViewClient());// Agregamos un WebViewCliente, esto permite que se sigan ejecutando los links dentro de este WebView
