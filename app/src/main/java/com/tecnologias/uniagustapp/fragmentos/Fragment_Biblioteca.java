@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import com.tecnologias.uniagustapp.R;
 import com.tecnologias.uniagustapp.utils.Connectivity;
-
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -25,7 +24,6 @@ public class Fragment_Biblioteca extends Fragment {
     public Fragment_Biblioteca() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

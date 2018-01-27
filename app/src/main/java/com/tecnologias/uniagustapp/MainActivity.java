@@ -49,7 +49,6 @@ import com.tecnologias.uniagustapp.fragmentos.Fragment_Instagram;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_LinkedIn;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Preguntas;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Twitter;
-import com.tecnologias.uniagustapp.fragmentos.Fragment_Youtube;
 import com.tecnologias.uniagustapp.objects.ElementoMenu;
 
 
@@ -84,7 +83,6 @@ public class MainActivity extends AppCompatActivity
         //Plataformas
 
         //Redes Sociales
-        final Fragment youtube = new Fragment_Youtube();
         final Fragment twitter = new Fragment_Twitter();
         final Fragment facebook = new Fragment_Facebook();
         final Fragment flickr = new Fragment_Flickr();
@@ -157,23 +155,27 @@ public class MainActivity extends AppCompatActivity
                         break;
 
                     case "Siga":
-                        Intent i5 = new Intent(MainActivity.this, Activity_SIGA.class);
-                        startActivity(i5);
-                        break;
-
-                    case "Apoyo a la Presencialidad":
-                        Intent i1 = new Intent(MainActivity.this, Activity_VirtualApoyo.class);
+                        Intent i1 = new Intent(MainActivity.this, Activity_SIGA.class);
                         startActivity(i1);
                         break;
 
-                    case "Virtualidad":
-                        Intent i2 = new Intent(MainActivity.this, Activity_Virtualidad.class);
+                    case "Apoyo a la Presencialidad":
+                        Intent i2 = new Intent(MainActivity.this, Activity_VirtualApoyo.class);
                         startActivity(i2);
                         break;
 
+                    case "Virtualidad":
+                        Intent i3 = new Intent(MainActivity.this, Activity_Virtualidad.class);
+                        startActivity(i3);
+                        break;
+
                     case "Youtube":
-                        fragmentTransaction.replace(R.id.content_main, youtube).addToBackStack(null).commit();
-                        getSupportActionBar().setTitle("Youtube");//Agrega titulo a ActionBar
+                        //fragmentTransaction.replace(R.id.content_main, youtube).addToBackStack(null).commit();
+                        //getSupportActionBar().setTitle("Youtube");//Agrega titulo a ActionBar
+
+                        Intent i4 = new Intent(MainActivity.this, Activity_youtube.class);
+                        startActivity(i4);
+
                         break;
 
                     case "Twitter":
@@ -207,8 +209,8 @@ public class MainActivity extends AppCompatActivity
                         break;
 
                     case "Tour 360":
-                        Intent i3 = new Intent(MainActivity.this, Activity_Tour360.class);
-                        startActivity(i3);
+                        Intent i5 = new Intent(MainActivity.this, Activity_Tour360.class);
+                        startActivity(i5);
                         break;
 
                     case "Juegos":
@@ -217,7 +219,6 @@ public class MainActivity extends AppCompatActivity
                         //Intent i4 = new Intent(MainActivity.this, Activity_JuegoMemoria.class);
                         //startActivity(i4);
                         break;
-
                 }
 
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
