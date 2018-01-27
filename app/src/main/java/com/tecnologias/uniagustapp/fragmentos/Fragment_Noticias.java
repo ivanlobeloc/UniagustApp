@@ -14,7 +14,6 @@ import android.webkit.WebViewClient;
 import android.widget.Toast;
 
 import com.tecnologias.uniagustapp.R;
-import com.tecnologias.uniagustapp.utils.Connectivity;
 
 /**
  * A simple {@link Fragment} subclass.

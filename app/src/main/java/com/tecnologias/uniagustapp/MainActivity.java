@@ -1,4 +1,23 @@
 package com.tecnologias.uniagustapp;
+        /*
+        Hi Developers at UNIAGUSTINIANA,
+
+        I reviewed Uniagustiniana, com.uniagustiniana.tecnologias.uniagustapp, and had to reject it because it violates our device and network abuse policy. If you submitted an update, the previous version of your app is still live on Google Play.
+
+        Here’s how you can submit your app for another review:
+
+        Your app shouldn’t access or use a service or API in a manner that violates its terms of service. For example, make sure your app doesn’t download, monetize, or access YouTube videos in a way that violates the YouTube Terms of Service.
+        Read through the Device and Network Abuse policy for more details and examples.
+        Make sure your app is compliant with all other policies listed in the Developer Program Policies. Remember that additional enforcement could occur if there are further policy issues with your apps.
+        Sign in to your Developer Console and submit your app.
+        If you’ve reviewed our policies and feel this rejection may have been in error, please reach out to our policy support team. One of my colleagues will get back to you within 2 business days.
+
+        I appreciate your support of Google Play!
+
+        Best,
+
+        Google Play Review Team;
+        */
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,6 +51,7 @@ import com.tecnologias.uniagustapp.fragmentos.Fragment_Preguntas;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Twitter;
 import com.tecnologias.uniagustapp.fragmentos.Fragment_Youtube;
 import com.tecnologias.uniagustapp.objects.ElementoMenu;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
