@@ -4,11 +4,11 @@ android {
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
     defaultConfig {
-        applicationId 'com.tecnologias.uniagustapp'
+        applicationId 'com.uniagustiniana.tecnologias.uniagustapp'
         minSdkVersion 21
         targetSdkVersion 26
         versionCode 1
-        versionName "1.0"
+        versionName '1'
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -21,10 +21,6 @@ android {
     productFlavors {
     }
 }
-
-
-
-
 
 
 dependencies {
