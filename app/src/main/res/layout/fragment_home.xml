@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="#3e3d3d"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.tecnologias.uniagustapp.fragmentos.Fragment_Home">
+    tools:context=".uniagustapp.fragmentos.Fragment_Home">
 
     <LinearLayout
         android:layout_width="match_parent"
