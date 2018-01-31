@@ -1,9 +1,10 @@
+<!--suppress AndroidDomInspection, AndroidDomInspection, AndroidDomInspection -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1D70b7"
-    tools:context=".uniagustapp.fragmentos.Fragment_Directorio">
+    tools:context="com.uniagustiniana.tecnologias.uniagustapp.Fragment_Directorio">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerId"

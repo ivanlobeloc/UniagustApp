@@ -1,3 +1,4 @@
+<!--suppress AndroidDomInspection, AndroidDomInspection, AndroidDomInspection -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -6,20 +7,21 @@
     android:orientation="vertical"
     android:id="@+id/fhome"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".uniagustapp.fragmentos.Fragment_Home">
+    tools:context="com.uniagustiniana.tecnologias.uniagustapp.Fragment_Home">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:layout_weight="1"
-        android:background="#282e60">
+        android:gravity="center"
+        android:background="#f8fdff">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/img_fondo_horizontal"
+            android:adjustViewBounds="true"
+            android:background="@drawable/img_fondo"
             tools:ignore="ContentDescription" />
     </LinearLayout>
 
@@ -32,12 +34,9 @@
             android:id="@+id/navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             android:layout_gravity="bottom"
             android:background="#1F2346"
             app:menu="@menu/navigation" />
-
     </LinearLayout>
+
 </LinearLayout>

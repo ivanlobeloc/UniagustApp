@@ -1,10 +1,11 @@
+<!--suppress AndroidDomInspection, AndroidDomInspection, AndroidDomInspection -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img_fondo_horizontal"
-    tools:context=".uniagustapp.fragmentos.Fragment_Juegos">
+    android:background="@drawable/img_fondo"
+    tools:context="com.uniagustiniana.tecnologias.uniagustapp.Fragment_Juegos">
 
     <RelativeLayout
         android:layout_width="match_parent"

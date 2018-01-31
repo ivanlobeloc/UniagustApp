@@ -37,13 +37,7 @@ public class Fragment_Rutas extends Fragment implements OnMapReadyCallback {
         mapFragment.getMapAsync(this);
 
         return v;
-    }
-
-    @Nullable
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
+        //AIzaSyBfIvrguKAhUaW8CA0dvgyEXEFADleNCtc
     }
 
     @Override//acercamiento
