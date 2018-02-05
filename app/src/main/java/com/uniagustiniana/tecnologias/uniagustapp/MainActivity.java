@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 //import com.uniagustiniana.tecnologias.R;
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_Biblioteca;
@@ -299,8 +300,18 @@ public class MainActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        final Fragment home = new Fragment_Home();
+
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            fragmentTransaction.replace(R.id.content_main, home).addToBackStack(null).commit();
+            getSupportActionBar().setTitle("Uniagustiniana App");//Agrega titulo a ActionBar
+            //Toast.makeText(this,"Presionaste arriba...",Toast.LENGTH_SHORT).show();
+
             return true;
         }
 
