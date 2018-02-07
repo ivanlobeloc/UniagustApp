@@ -1,5 +1,6 @@
 package com.uniagustiniana.tecnologias.uniagustapp.fragmentos;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -15,6 +16,7 @@ import android.view.ViewGroup;
 
 import com.uniagustiniana.tecnologias.uniagustapp.CustomSwipeAadapter;
 
+import com.uniagustiniana.tecnologias.uniagustapp.MapsActivity;
 import com.uniagustiniana.tecnologias.uniagustapp.R;
 
 import java.util.Timer;
@@ -71,8 +73,10 @@ public class Fragment_Home extends Fragment {
                     fragmentTransaction.replace(R.id.content_main, noticias).commit();
                     ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Noticias");//Agrega titulo a ActionBar
                 } else if (item.getItemId() == R.id.rutas) {
-                    fragmentTransaction.replace(R.id.content_main, rutas).commit();
-                    ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Rutas");//Agrega titulo a ActionBar
+                    //fragmentTransaction.replace(R.id.content_main, rutas).commit();
+                    Intent i = new Intent(getContext(), MapsActivity.class);
+                    startActivity(i);
+                    //((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Rutas");//Agrega titulo a ActionBar
                 } else if (item.getItemId() == R.id.cal_aca) {
                     fragmentTransaction.replace(R.id.content_main, calendario).commit();
                     ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Calendario Académico");//Agrega titulo a ActionBar

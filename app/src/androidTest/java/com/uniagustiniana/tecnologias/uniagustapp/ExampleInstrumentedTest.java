@@ -1,4 +1,4 @@
-package com.uniagustiniana.tecnologias;
+package com.uniagustiniana.tecnologias.uniagustapp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.tecnologias.uniagustapp", appContext.getPackageName());
+        assertEquals("com.uniagustiniana.tecnologias.uniagustapp", appContext.getPackageName());
     }
 }

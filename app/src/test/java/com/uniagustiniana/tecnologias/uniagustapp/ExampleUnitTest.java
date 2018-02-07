@@ -1,4 +1,4 @@
-package com.uniagustiniana.tecnologias;
+package com.uniagustiniana.tecnologias.uniagustapp;
 
 import org.junit.Test;
 

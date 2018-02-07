@@ -1,0 +1,68 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_juegos"
+    tools:context="com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_Roundme">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8d000000">
+
+        <ImageButton
+            android:id="@+id/imgBtn01"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:paddingEnd="280dp"
+            android:paddingStart="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="53dp"
+            android:background="@drawable/rounded"
+            android:gravity="center"
+            android:src="@mipmap/ic_launcher" android:contentDescription="@string/icono" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/imgBtn02"
+            android:layout_alignEnd="@+id/imgBtn01"
+            android:layout_marginBottom="19dp"
+            android:layout_marginEnd="38dp"
+            android:clickable="false"
+            android:ems="10"
+            android:text="Tour Campus Tagaste"
+            android:textColor="#a9b12f"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+        <ImageButton
+            android:id="@+id/imgBtn02"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:layout_alignStart="@+id/imgBtn01"
+            android:layout_below="@+id/imgBtn01"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/rounded"
+            android:gravity="center"
+            android:paddingStart="0dp"
+            android:paddingEnd="280dp"
+            android:src="@mipmap/ic_launcher" android:contentDescription="@string/icono" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imgBtn02"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_marginBottom="20dp"
+            android:clickable="false"
+            android:ems="10"
+            android:text="Tour Sede Suba"
+            android:textColor="#a9b12f"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+    </RelativeLayout>
+
+</FrameLayout>

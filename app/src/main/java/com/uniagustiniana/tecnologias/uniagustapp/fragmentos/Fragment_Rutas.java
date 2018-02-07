@@ -33,8 +33,8 @@ public class Fragment_Rutas extends Fragment implements OnMapReadyCallback {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_rutas, container, false);
 
-        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
+        //SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
+        //mapFragment.getMapAsync(this);
 
         return v;
         //AIzaSyBfIvrguKAhUaW8CA0dvgyEXEFADleNCtc

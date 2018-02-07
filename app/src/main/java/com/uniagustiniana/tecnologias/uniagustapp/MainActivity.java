@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_Biblioteca;
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_Directorio;
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_EVU;
+import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_Eventos;
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_Facebook;
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_Flickr;
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_GooglePlus;
@@ -30,6 +31,7 @@ import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_PortalHome
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_Instagram;
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_LinkedIn;
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_Preguntas;
+import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_Roundme;
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_Twitter;
 import com.uniagustiniana.tecnologias.uniagustapp.objects.ElementoMenu;
 
@@ -40,7 +42,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity
     implements Fragment_Biblioteca.OnFragmentInteractionListener, Fragment_Directorio.OnFragmentInteractionListener, Fragment_PortalHome.OnFragmentInteractionListener,
-        Fragment_Preguntas.OnFragmentInteractionListener, Fragment_EVU.OnFragmentInteractionListener {
+        Fragment_Preguntas.OnFragmentInteractionListener, Fragment_EVU.OnFragmentInteractionListener, Fragment_Eventos.OnFragmentInteractionListener {
 
     //ExpandableListView para el menú
     private ExpandableListView listView;
@@ -62,6 +64,7 @@ public class MainActivity extends AppCompatActivity
         final Fragment evu = new Fragment_EVU();
         final Fragment directorio = new Fragment_Directorio();
         final Fragment preguntas = new Fragment_Preguntas();
+        final Fragment eventos = new Fragment_Eventos();
         //Plataformas
 
         //Redes Sociales
@@ -72,6 +75,7 @@ public class MainActivity extends AppCompatActivity
         final Fragment instagram = new Fragment_Instagram();
         final Fragment linkedin = new Fragment_LinkedIn();
         final Fragment juegos = new Fragment_Juegos();
+        final Fragment tour = new Fragment_Roundme();
 
         //ExpandableListView para el menú
         listView = (ExpandableListView)findViewById(R.id.ex_lits_menu);
@@ -114,6 +118,12 @@ public class MainActivity extends AppCompatActivity
                         fragmentTransaction.remove(home);
                         fragmentTransaction.replace(R.id.content_main, p_home).addToBackStack(null).commit();
                         getSupportActionBar().setTitle("Portal Home");//Agrega titulo a ActionBar
+                        break;
+
+                    case "Eventos":
+                        fragmentTransaction.replace(R.id.content_main, eventos).addToBackStack(null).commit();
+                        getSupportActionBar().setTitle("Eventos");//Agrega titulo a ActionBar
+                        //Toast.makeText(getApplicationContext(),"Esta sección no esta disponible",Toast.LENGTH_SHORT).show();
                         break;
 
                     case "Biblioteca":
@@ -191,8 +201,10 @@ public class MainActivity extends AppCompatActivity
                         break;
 
                     case "Tour 360":
-                        Intent i5 = new Intent(MainActivity.this, Activity_Tour360.class);
-                        startActivity(i5);
+                        fragmentTransaction.replace(R.id.content_main, tour).addToBackStack(null).commit();
+                        getSupportActionBar().setTitle("Tour Virtual");
+                        //Intent i5 = new Intent(MainActivity.this, Activity_Tour360.class);
+                        //startActivity(i5);
                         break;
 
                     case "Juegos":
@@ -226,10 +238,10 @@ public class MainActivity extends AppCompatActivity
 
         ElementoMenu elemento = new ElementoMenu("Home", R.mipmap.home);
         itemMenus1.add(elemento);
-
         elemento = new ElementoMenu("Portal Home", R.mipmap.portal);
         itemMenus1.add(elemento);
-
+        elemento = new ElementoMenu("Eventos", R.mipmap.calendario);
+        itemMenus1.add(elemento);
         elemento = new ElementoMenu("Biblioteca", R.mipmap.biblioteca);
         itemMenus1.add(elemento);
         elemento = new ElementoMenu("EduVirtual", R.mipmap.eduvirtual);
