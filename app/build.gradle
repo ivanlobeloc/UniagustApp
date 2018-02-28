@@ -7,7 +7,7 @@ android {
         applicationId 'com.uniagustiniana.tecnologias.uniagustapp'
         minSdkVersion 21
         targetSdkVersion 26
-        versionCode 7
+        versionCode 10
         versionName '1'
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -21,6 +21,7 @@ android {
     productFlavors {
     }
 }
+
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')

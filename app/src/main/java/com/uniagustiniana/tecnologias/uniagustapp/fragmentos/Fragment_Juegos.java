@@ -55,7 +55,7 @@ public class Fragment_Juegos extends Fragment {
             public void onClick(View v) {
                 //Intent i = new Intent(getContext(), Activity_JuegoAjedrez.class);
                 //startActivity(i);
-                Toast.makeText(getActivity(),"Este juego aun no está disponible",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"(V8) 8/02/2018 10:15 am",Toast.LENGTH_SHORT).show();
             }
         });
 

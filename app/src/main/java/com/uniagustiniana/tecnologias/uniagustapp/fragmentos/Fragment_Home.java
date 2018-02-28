@@ -73,10 +73,10 @@ public class Fragment_Home extends Fragment {
                     fragmentTransaction.replace(R.id.content_main, noticias).commit();
                     ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Noticias");//Agrega titulo a ActionBar
                 } else if (item.getItemId() == R.id.rutas) {
-                    //fragmentTransaction.replace(R.id.content_main, rutas).commit();
-                    Intent i = new Intent(getContext(), MapsActivity.class);
-                    startActivity(i);
-                    //((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Rutas");//Agrega titulo a ActionBar
+                    fragmentTransaction.replace(R.id.content_main, rutas).commit();
+                    ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Rutas");//Agrega titulo a ActionBar
+                    //Intent i = new Intent(getContext(), MapsActivity.class);
+                    //startActivity(i);
                 } else if (item.getItemId() == R.id.cal_aca) {
                     fragmentTransaction.replace(R.id.content_main, calendario).commit();
                     ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Calendario Académico");//Agrega titulo a ActionBar
