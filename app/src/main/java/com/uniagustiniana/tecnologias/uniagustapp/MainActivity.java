@@ -27,6 +27,7 @@ import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_Flickr;
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_GooglePlus;
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_Home;
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_Juegos;
+import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_Mweb;
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_PortalHome;
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_Instagram;
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_LinkedIn;
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity
         final Fragment directorio = new Fragment_Directorio();
         final Fragment preguntas = new Fragment_Preguntas();
         final Fragment eventos = new Fragment_Eventos();
+        final Fragment mweb = new Fragment_Mweb();
         //Plataformas
 
         //Redes Sociales
@@ -134,6 +136,11 @@ public class MainActivity extends AppCompatActivity
                     case "EduVirtual":
                         fragmentTransaction.replace(R.id.content_main, evu).addToBackStack(null).commit();
                         getSupportActionBar().setTitle("EVU Home");//Agrega titulo a ActionBar
+                        break;
+
+                    case "MIntraweb":
+                        fragmentTransaction.replace(R.id.content_main, mweb).addToBackStack(null).commit();
+                        getSupportActionBar().setTitle("MIntraweb");//Agrega titulo a ActionBar
                         break;
 
                     case "Directorio":
@@ -247,6 +254,8 @@ public class MainActivity extends AppCompatActivity
         elemento = new ElementoMenu("EduVirtual", R.mipmap.eduvirtual);
         itemMenus1.add(elemento);
         elemento = new ElementoMenu("Directorio", R.mipmap.directorio);
+        itemMenus1.add(elemento);
+        elemento = new ElementoMenu("MIntraweb", R.mipmap.portal);
         itemMenus1.add(elemento);
         elemento = new ElementoMenu("Preguntas", R.mipmap.preguntasf);
         itemMenus1.add(elemento);

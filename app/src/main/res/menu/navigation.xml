@@ -20,5 +20,5 @@
     <item
         android:id="@+id/preinscripcion"
         android:icon="@mipmap/finscripcion"
-        android:title="Pre-Inscripción" />
+        android:title="Lanzamiento" />
 </menu>

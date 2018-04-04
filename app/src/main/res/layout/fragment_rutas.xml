@@ -31,22 +31,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Rutas Sitp Norte - Sur"
+                android:text="Rutas Sitp"
                 android:textColor="#130f54"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Paradero 349A07 - Uniagustiniana"
-                android:textColor="#130f54"
-                android:textSize="16sp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Av. C. de Cali - Cl. 11 A"
+                android:text="Av. ciudad de Cali  No. 11 B 95"
                 android:textColor="#130f54"
                 android:textSize="14sp" />
 
@@ -63,11 +56,23 @@
                 android:orientation="vertical">
                 <!-- Listado de rutas que pasan frente a la U -->
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#3c8ea4">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_sitp1"
+                        android:textSize="18sp"
+                        android:text="PARADERO 349A07"/>
+                </LinearLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp">
-
                     <ImageView
                         android:id="@+id/imageView"
                         android:layout_width="wrap_content"
@@ -75,14 +80,14 @@
                         android:layout_alignBottom="@+id/detalle"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:maxHeight="35dp"
-                        android:maxWidth="74dp"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
                         android:src="@drawable/logobus0"/>
                     <TextView
                         android:id="@+id/titulo"
@@ -93,7 +98,7 @@
                         android:layout_toRightOf="@+id/imageView"
                         android:text="7: Palmitas - Consuelo"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="#f65034"
+                        android:textColor="@color/color_sitp1"
                         android:textStyle="bold"
                         android:textSize="18sp" />
                     <TextView
@@ -105,14 +110,12 @@
                         android:layout_toRightOf="@+id/imageView"
                         android:text="@string/d7"
                         android:textSize="14sp"
-                        android:textColor="#282b87" />
+                        android:textColor="@color/color_sitp1" />
                 </RelativeLayout>
-
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp">
-
                     <ImageView
                         android:id="@+id/imageView2"
                         android:layout_width="wrap_content"
@@ -120,14 +123,14 @@
                         android:layout_alignBottom="@+id/detalle2"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:maxHeight="35dp"
-                        android:maxWidth="74dp"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
                         android:src="@drawable/logobus0"/>
                     <TextView
                         android:id="@+id/titulo2"
@@ -138,7 +141,7 @@
                         android:layout_toRightOf="@+id/imageView2"
                         android:text="265: Chicó Norte - Tierra Buena"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="#f65034"
+                        android:textColor="@color/color_sitp1"
                         android:textStyle="bold"
                         android:textSize="18sp" />
                     <TextView
@@ -150,9 +153,8 @@
                         android:layout_toRightOf="@+id/imageView2"
                         android:text="@string/d7"
                         android:textSize="14sp"
-                        android:textColor="#282b87" />
+                        android:textColor="@color/color_sitp1" />
                 </RelativeLayout>
-
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -164,14 +166,14 @@
                         android:layout_alignBottom="@+id/detalle3"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:maxHeight="35dp"
-                        android:maxWidth="74dp"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
                         android:src="@drawable/logobus0"/>
                     <TextView
                         android:id="@+id/titulo3"
@@ -182,7 +184,7 @@
                         android:layout_toRightOf="@+id/imageView3"
                         android:text="266: San Joaquín - La Estrellita"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="#f65034"
+                        android:textColor="@color/color_sitp1"
                         android:textStyle="bold"
                         android:textSize="18sp" />
                     <TextView
@@ -194,7 +196,7 @@
                         android:layout_toRightOf="@+id/imageView3"
                         android:text="@string/d7"
                         android:textSize="14sp"
-                        android:textColor="#282b87" />
+                        android:textColor="@color/color_sitp1" />
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -207,14 +209,14 @@
                         android:layout_alignBottom="@+id/detalle4"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:maxHeight="35dp"
-                        android:maxWidth="74dp"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
                         android:src="@drawable/logobus0"/>
                     <TextView
                         android:id="@+id/titulo4"
@@ -225,7 +227,7 @@
                         android:layout_toRightOf="@+id/imageView4"
                         android:text="270: Riveras de Occ. - La Estrellita"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="#f65034"
+                        android:textColor="@color/color_sitp1"
                         android:textStyle="bold"
                         android:textSize="18sp" />
                     <TextView
@@ -237,7 +239,7 @@
                         android:layout_toRightOf="@+id/imageView4"
                         android:text="@string/d7"
                         android:textSize="14sp"
-                        android:textColor="#282b87" />
+                        android:textColor="@color/color_sitp1" />
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -250,14 +252,14 @@
                         android:layout_alignBottom="@+id/detalle5"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:maxHeight="35dp"
-                        android:maxWidth="74dp"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
                         android:src="@drawable/logobus0"/>
                     <TextView
                         android:id="@+id/titulo5"
@@ -268,7 +270,7 @@
                         android:layout_toRightOf="@+id/imageView5"
                         android:text="291: Lijacá - Tierra Buena"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="#f65034"
+                        android:textColor="@color/color_sitp1"
                         android:textStyle="bold"
                         android:textSize="18sp" />
                     <TextView
@@ -280,7 +282,7 @@
                         android:layout_toRightOf="@+id/imageView5"
                         android:text="@string/d7"
                         android:textSize="14sp"
-                        android:textColor="#282b87" />
+                        android:textColor="@color/color_sitp1" />
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -293,14 +295,14 @@
                         android:layout_alignBottom="@+id/detalle6"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:maxHeight="35dp"
-                        android:maxWidth="74dp"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
                         android:src="@drawable/logobus0"/>
                     <TextView
                         android:id="@+id/titulo6"
@@ -311,7 +313,7 @@
                         android:layout_toRightOf="@+id/imageView6"
                         android:text="577: El Palmar - Diana Turbay"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="#f65034"
+                        android:textColor="@color/color_sitp1"
                         android:textStyle="bold"
                         android:textSize="18sp" />
                     <TextView
@@ -323,9 +325,8 @@
                         android:layout_toRightOf="@+id/imageView6"
                         android:text="@string/d7"
                         android:textSize="14sp"
-                        android:textColor="#282b87" />
+                        android:textColor="@color/color_sitp1" />
                 </RelativeLayout>
-
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -337,14 +338,14 @@
                         android:layout_alignBottom="@+id/detalle7"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:maxHeight="35dp"
-                        android:maxWidth="74dp"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
                         android:src="@drawable/logobus0"/>
                     <TextView
                         android:id="@+id/titulo7"
@@ -355,7 +356,7 @@
                         android:layout_toRightOf="@+id/imageView7"
                         android:text="702: Corabastos - Sabana del Dorado"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="#f65034"
+                        android:textColor="@color/color_sitp1"
                         android:textStyle="bold"
                         android:textSize="18sp" />
                     <TextView
@@ -367,9 +368,8 @@
                         android:layout_toRightOf="@+id/imageView7"
                         android:text="@string/d7"
                         android:textSize="14sp"
-                        android:textColor="#282b87" />
+                        android:textColor="@color/color_sitp1" />
                 </RelativeLayout>
-
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -381,14 +381,14 @@
                         android:layout_alignBottom="@+id/detalle8"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:maxHeight="35dp"
-                        android:maxWidth="74dp"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
                         android:src="@drawable/logobus0"/>
                     <TextView
                         android:id="@+id/titulo8"
@@ -399,7 +399,7 @@
                         android:layout_toRightOf="@+id/imageView8"
                         android:text="722: Palmitas - San Cristóbal Nte."
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="#f65034"
+                        android:textColor="@color/color_sitp1"
                         android:textStyle="bold"
                         android:textSize="18sp" />
                     <TextView
@@ -411,9 +411,8 @@
                         android:layout_toRightOf="@+id/imageView8"
                         android:text="@string/d7"
                         android:textSize="14sp"
-                        android:textColor="#282b87" />
+                        android:textColor="@color/color_sitp1" />
                 </RelativeLayout>
-
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -425,14 +424,14 @@
                         android:layout_alignBottom="@+id/detalle9"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:maxHeight="35dp"
-                        android:maxWidth="74dp"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
                         android:src="@drawable/logobus0"/>
                     <TextView
                         android:id="@+id/titulo9"
@@ -443,7 +442,7 @@
                         android:layout_toRightOf="@+id/imageView9"
                         android:text="740: Engativá La Tortigua - Canadá Guira"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="#f65034"
+                        android:textColor="@color/color_sitp1"
                         android:textStyle="bold"
                         android:textSize="18sp" />
                     <TextView
@@ -455,9 +454,8 @@
                         android:layout_toRightOf="@+id/imageView9"
                         android:text="@string/d7"
                         android:textSize="14sp"
-                        android:textColor="#282b87" />
+                        android:textColor="@color/color_sitp1" />
                 </RelativeLayout>
-
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -469,14 +467,14 @@
                         android:layout_alignBottom="@+id/detalle10"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:maxHeight="35dp"
-                        android:maxWidth="74dp"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
                         android:src="@drawable/logobus0"/>
                     <TextView
                         android:id="@+id/titulo10"
@@ -487,7 +485,7 @@
                         android:layout_toRightOf="@+id/imageView10"
                         android:text="870A: Tierra Buena - Cantón Norte"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="#f65034"
+                        android:textColor="@color/color_sitp1"
                         android:textStyle="bold"
                         android:textSize="18sp" />
                     <TextView
@@ -499,9 +497,8 @@
                         android:layout_toRightOf="@+id/imageView10"
                         android:text="@string/d7"
                         android:textSize="14sp"
-                        android:textColor="#282b87" />
+                        android:textColor="@color/color_sitp1" />
                 </RelativeLayout>
-
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -513,14 +510,14 @@
                         android:layout_alignBottom="@+id/detalle11"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:maxHeight="35dp"
-                        android:maxWidth="74dp"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
                         android:src="@drawable/logobus0"/>
                     <TextView
                         android:id="@+id/titulo11"
@@ -531,7 +528,7 @@
                         android:layout_toRightOf="@+id/imageView11"
                         android:text="921: Compartir - Portal el Dorado"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="#f65034"
+                        android:textColor="@color/color_sitp1"
                         android:textStyle="bold"
                         android:textSize="18sp" />
                     <TextView
@@ -543,7 +540,7 @@
                         android:layout_toRightOf="@+id/imageView11"
                         android:text="@string/d7"
                         android:textSize="14sp"
-                        android:textColor="#282b87" />
+                        android:textColor="@color/color_sitp1" />
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -556,14 +553,14 @@
                         android:layout_alignBottom="@+id/detalle12"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:maxHeight="35dp"
-                        android:maxWidth="74dp"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
                         android:src="@drawable/logobus0"/>
                     <TextView
                         android:id="@+id/titulo12"
@@ -574,7 +571,7 @@
                         android:layout_toRightOf="@+id/imageView12"
                         android:text="953: La Ficala Alta - Suba Salitre"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="#f65034"
+                        android:textColor="@color/color_sitp1"
                         android:textStyle="bold"
                         android:textSize="18sp" />
                     <TextView
@@ -586,7 +583,7 @@
                         android:layout_toRightOf="@+id/imageView12"
                         android:text="@string/d7"
                         android:textSize="14sp"
-                        android:textColor="#282b87" />
+                        android:textColor="@color/color_sitp1" />
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -599,14 +596,14 @@
                         android:layout_alignBottom="@+id/detalle13"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:maxHeight="35dp"
-                        android:maxWidth="74dp"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
                         android:src="@drawable/logobus0"/>
                     <TextView
                         android:id="@+id/titulo13"
@@ -617,7 +614,7 @@
                         android:layout_toRightOf="@+id/imageView13"
                         android:text="C77: Tintalá - Tibabita"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="#f65034"
+                        android:textColor="@color/color_sitp1"
                         android:textStyle="bold"
                         android:textSize="18sp" />
                     <TextView
@@ -629,9 +626,8 @@
                         android:layout_toRightOf="@+id/imageView13"
                         android:text="@string/d7"
                         android:textSize="14sp"
-                        android:textColor="#282b87" />
+                        android:textColor="@color/color_sitp1" />
                 </RelativeLayout>
-
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -643,14 +639,14 @@
                         android:layout_alignBottom="@+id/detalle14"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:maxHeight="35dp"
-                        android:maxWidth="74dp"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
                         android:src="@drawable/logobus0"/>
                     <TextView
                         android:id="@+id/titulo14"
@@ -661,7 +657,7 @@
                         android:layout_toRightOf="@+id/imageView14"
                         android:text="C100: Teusaquillo - La Magdalena"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="#f65034"
+                        android:textColor="@color/color_sitp1"
                         android:textStyle="bold"
                         android:textSize="18sp" />
                     <TextView
@@ -673,9 +669,8 @@
                         android:layout_toRightOf="@+id/imageView14"
                         android:text="@string/d7"
                         android:textSize="14sp"
-                        android:textColor="#282b87" />
+                        android:textColor="@color/color_sitp1" />
                 </RelativeLayout>
-
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -687,14 +682,14 @@
                         android:layout_alignBottom="@+id/detalle15"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="4dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
                         android:adjustViewBounds="true"
                         android:cropToPadding="false"
-                        android:maxHeight="35dp"
-                        android:maxWidth="74dp"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
                         android:src="@drawable/logobus0"/>
                     <TextView
                         android:id="@+id/titulo15"
@@ -705,7 +700,7 @@
                         android:layout_toRightOf="@+id/imageView15"
                         android:text="T50: La Magdalena - Germania"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="#f65034"
+                        android:textColor="@color/color_sitp1"
                         android:textStyle="bold"
                         android:textSize="18sp" />
                     <TextView
@@ -717,8 +712,984 @@
                         android:layout_toRightOf="@+id/imageView15"
                         android:text="@string/d7"
                         android:textSize="14sp"
-                        android:textColor="#282b87" />
+                        android:textColor="@color/color_sitp1" />
                 </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#3c8ea4">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_sitp1"
+                        android:textSize="18sp"
+                        android:text="PARADERO 349B07"/>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle16"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView16"
+                        android:layout_toRightOf="@+id/imageView16"
+                        android:text="94: Bosa San Diego - Suba Corpas"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo16"
+                        android:layout_toEndOf="@+id/imageView16"
+                        android:layout_toRightOf="@+id/imageView16"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle17"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView17"
+                        android:layout_toRightOf="@+id/imageView17"
+                        android:text="105: Boitá - Bachué"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo17"
+                        android:layout_toEndOf="@+id/imageView17"
+                        android:layout_toRightOf="@+id/imageView17"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle18"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView18"
+                        android:layout_toRightOf="@+id/imageView18"
+                        android:text="111: Metrovivienda - San Rafael Sur Or."
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo18"
+                        android:layout_toEndOf="@+id/imageView18"
+                        android:layout_toRightOf="@+id/imageView18"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle19"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView19"
+                        android:layout_toRightOf="@+id/imageView19"
+                        android:text="132: San Bernardino / Potreritos - Chapinero Central"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo19"
+                        android:layout_toEndOf="@+id/imageView19"
+                        android:layout_toRightOf="@+id/imageView19"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle20"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView20"
+                        android:layout_toRightOf="@+id/imageView20"
+                        android:text="148: Villa Teresita - Doña Liliana"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo20"
+                        android:layout_toEndOf="@+id/imageView20"
+                        android:layout_toRightOf="@+id/imageView20"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle21"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView21"
+                        android:layout_toRightOf="@+id/imageView21"
+                        android:text="787A: Metrovivienda - Teusaquillo"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo21"
+                        android:layout_toEndOf="@+id/imageView21"
+                        android:layout_toRightOf="@+id/imageView21"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle22"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView22"
+                        android:layout_toRightOf="@+id/imageView22"
+                        android:text="927: Bosa San José - Bachué"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo22"
+                        android:layout_toEndOf="@+id/imageView22"
+                        android:layout_toRightOf="@+id/imageView22"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle23"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView23"
+                        android:layout_toRightOf="@+id/imageView23"
+                        android:text="C135: Bosa San José - Germania"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo23"
+                        android:layout_toEndOf="@+id/imageView23"
+                        android:layout_toRightOf="@+id/imageView23"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle24"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView24"
+                        android:layout_toRightOf="@+id/imageView24"
+                        android:text="T38: Metrovivienda - Est. Modelia"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo24"
+                        android:layout_toEndOf="@+id/imageView24"
+                        android:layout_toRightOf="@+id/imageView24"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#3c8ea4">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_sitp1"
+                        android:textSize="18sp"
+                        android:text="PARADERO 126A07"/>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle25"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView25"
+                        android:layout_toRightOf="@+id/imageView25"
+                        android:text="7: Palmitas - Consuelo"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo25"
+                        android:layout_toEndOf="@+id/imageView25"
+                        android:layout_toRightOf="@+id/imageView25"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle26"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView26"
+                        android:layout_toRightOf="@+id/imageView26"
+                        android:text="105: Boitá - Bachué"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo26"
+                        android:layout_toEndOf="@+id/imageView26"
+                        android:layout_toRightOf="@+id/imageView26"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle27"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView27"
+                        android:layout_toRightOf="@+id/imageView27"
+                        android:text="111: Metrovivienda - San Rafael Sur Or."
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo27"
+                        android:layout_toEndOf="@+id/imageView27"
+                        android:layout_toRightOf="@+id/imageView27"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle28"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView28"
+                        android:layout_toRightOf="@+id/imageView28"
+                        android:text="132: San Bernardino / Potreritos - Chapinero Central"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo28"
+                        android:layout_toEndOf="@+id/imageView28"
+                        android:layout_toRightOf="@+id/imageView28"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle29"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView29"
+                        android:layout_toRightOf="@+id/imageView29"
+                        android:text="148: Villa Teresita - Doña Liliana"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo29"
+                        android:layout_toEndOf="@+id/imageView29"
+                        android:layout_toRightOf="@+id/imageView29"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle30"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView30"
+                        android:layout_toRightOf="@+id/imageView30"
+                        android:text="577: El Palmar - Diana Turbay"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo30"
+                        android:layout_toEndOf="@+id/imageView30"
+                        android:layout_toRightOf="@+id/imageView30"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle31"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView31"
+                        android:layout_toRightOf="@+id/imageView31"
+                        android:text="702: Tintal - Engativá"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo31"
+                        android:layout_toEndOf="@+id/imageView31"
+                        android:layout_toRightOf="@+id/imageView31"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle32"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView32"
+                        android:layout_toRightOf="@+id/imageView32"
+                        android:text="740: Engativá- Canadá Guira"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo32"
+                        android:layout_toEndOf="@+id/imageView32"
+                        android:layout_toRightOf="@+id/imageView32"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle33"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView33"
+                        android:layout_toRightOf="@+id/imageView33"
+                        android:text="787A: Metrovivienda - Teusaquillo"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo33"
+                        android:layout_toEndOf="@+id/imageView33"
+                        android:layout_toRightOf="@+id/imageView33"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle34"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView34"
+                        android:layout_toRightOf="@+id/imageView34"
+                        android:text="921: Compartir - Portal el Dorado"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo34"
+                        android:layout_toEndOf="@+id/imageView34"
+                        android:layout_toRightOf="@+id/imageView34"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle35"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView35"
+                        android:layout_toRightOf="@+id/imageView35"
+                        android:text="927: Bosa San José - Bachué"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo35"
+                        android:layout_toEndOf="@+id/imageView35"
+                        android:layout_toRightOf="@+id/imageView35"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle36"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView36"
+                        android:layout_toRightOf="@+id/imageView36"
+                        android:text="C100: Teusaquillo - La Magdalena"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo36"
+                        android:layout_toEndOf="@+id/imageView36"
+                        android:layout_toRightOf="@+id/imageView36"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/imageView37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/detalle37"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="@dimen/sitp_marginBottom"
+                        android:layout_marginStart="@dimen/sitp_marginStart"
+                        android:layout_marginEnd="@dimen/sitp_marginEnd"
+                        android:layout_marginTop="@dimen/sitp_marginTop"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:maxHeight="@dimen/sitp_maxHeight"
+                        android:maxWidth="@dimen/sitp_maxWidth"
+                        android:src="@drawable/logobus0"/>
+                    <TextView
+                        android:id="@+id/titulo37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/imageView37"
+                        android:layout_toRightOf="@+id/imageView37"
+                        android:text="T50: La Magdalena - Germania"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/color_sitp1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/detalle37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/titulo37"
+                        android:layout_toEndOf="@+id/imageView37"
+                        android:layout_toRightOf="@+id/imageView37"
+                        android:text="@string/d7"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_sitp1" />
+                </RelativeLayout>
+
                 <!-- Una caja de texto vacía, para generar espacios -->
                 <TextView
                     android:layout_width="match_parent"

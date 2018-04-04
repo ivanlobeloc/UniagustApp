@@ -10,8 +10,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="70dp"
-        android:background="#3e3d3d">
+        android:layout_marginBottom="55dp"
+        android:background="@drawable/fondo_slide2">
 
         <android.support.v4.view.ViewPager
             android:id="@+id/view_pager"

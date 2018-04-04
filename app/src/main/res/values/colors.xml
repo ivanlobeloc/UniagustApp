@@ -8,4 +8,7 @@
 
     <color name="fila_a">#d5e1ed</color>
     <color name="fila_b">#a7deef</color>
+
+    <!-- TODO: SITP: A continuación SITP -->
+    <color name="color_sitp1">#130f54</color>
 </resources>

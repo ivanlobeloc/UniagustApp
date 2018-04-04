@@ -5,4 +5,13 @@
     <dimen name="nav_header_vertical_spacing">16dp</dimen>
     <dimen name="nav_header_height">160dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="sitp_marginBottom">2dp</dimen>
+    <dimen name="sitp_marginStart">8dp</dimen>
+    <dimen name="sitp_marginEnd">4dp</dimen>
+    <dimen name="sitp_marginTop">2dp</dimen>
+    <dimen name="sitp_maxHeight">35dp</dimen>
+    <dimen name="sitp_maxWidth">74dp</dimen>
+
+    <!-- SITP Rutas. -->
+
 </resources>

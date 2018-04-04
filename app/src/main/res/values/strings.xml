@@ -14,8 +14,6 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_maps">Map</string>
 
-    <!-- TODO: SITP: A continuación textos layout SITP -->
-    <string name="d7">L-S |   04:00AM - 11:00 PM\nD-F |   05:00AM - 11:00 PM</string>
     <string name="imagen_cabecera_nav_header">Imagen cabecera nav header</string>
     <string name="calendario_acad_mico_i_2018">Calendario académico I-2018</string>
     <string name="pregrado">Pregrado</string>
@@ -23,4 +21,8 @@
     <string name="memory_game">Memory Game</string>
     <string name="sudoku">Sudoku</string>
     <string name="icono">icono</string>
+
+    <!-- TODO: SITP: A continuación textos layout SITP -->
+    <string name="d7">L-S |   04:00AM - 11:00 PM\nD-F |   05:00AM - 11:00 PM</string>
+
 </resources>
