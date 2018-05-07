@@ -15,9 +15,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
-import android.widget.Toast;
 
 //import com.uniagustiniana.tecnologias.R;
+import com.uniagustiniana.tecnologias.uniagustapp.adaptadores.ExpandableListAdapter;
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_Biblioteca;
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_Directorio;
 import com.uniagustiniana.tecnologias.uniagustapp.fragmentos.Fragment_EVU;
@@ -287,7 +287,7 @@ public class MainActivity extends AppCompatActivity
         List<ElementoMenu> itemMenus4 = new ArrayList<>();
         elemento = new ElementoMenu("Tour 360", R.mipmap.tour);
         itemMenus4.add(elemento);
-        elemento = new ElementoMenu("Juegos", R.mipmap.eduvirtual);
+        elemento = new ElementoMenu("Juegos", R.mipmap.juegos);
         itemMenus4.add(elemento);
 
         listHash.put(listDataHeader.get(0),itemMenus1);

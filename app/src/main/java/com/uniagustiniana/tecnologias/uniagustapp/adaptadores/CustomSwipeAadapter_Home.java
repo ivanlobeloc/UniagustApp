@@ -1,4 +1,4 @@
-package com.uniagustiniana.tecnologias.uniagustapp;
+package com.uniagustiniana.tecnologias.uniagustapp.adaptadores;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
@@ -8,19 +8,19 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-//import com.uniagustiniana.tecnologias.R;
+import com.uniagustiniana.tecnologias.uniagustapp.R;
 
 /**
  * Created by ivan.lobelo on 11/9/2017.
  */
 
-public class CustomSwipeAadapter extends PagerAdapter {
+public class CustomSwipeAadapter_Home extends PagerAdapter {
 
     private int[] image_resource = {R.drawable.slide_01,R.drawable.slide_02,R.drawable.slide_03};
     private Context context;
     private LayoutInflater layoutInflater;
 
-    public CustomSwipeAadapter(Context context){
+    public CustomSwipeAadapter_Home(Context context){
         this.context=context;
     }
 

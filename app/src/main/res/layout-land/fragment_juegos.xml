@@ -97,7 +97,7 @@
             android:layout_marginBottom="21dp"
             android:clickable="false"
             android:ems="10"
-            android:text="Ajedréz"
+            android:text="Puzzle 15"
             android:textColor="#a9b12f"
             android:textSize="20dp"
             android:textStyle="bold|italic"

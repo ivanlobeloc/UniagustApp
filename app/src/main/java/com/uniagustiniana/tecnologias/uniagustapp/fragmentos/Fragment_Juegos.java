@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.uniagustiniana.tecnologias.uniagustapp.Activity_JuegoMemoria;
+import com.uniagustiniana.tecnologias.uniagustapp.Activity_JuegoPuzzle;
 import com.uniagustiniana.tecnologias.uniagustapp.Activity_JuegoSudoku;
 
 import com.uniagustiniana.tecnologias.uniagustapp.R;
@@ -53,9 +54,9 @@ public class Fragment_Juegos extends Fragment {
         imgBtn03.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent i = new Intent(getContext(), Activity_JuegoAjedrez.class);
-                //startActivity(i);
-                Toast.makeText(getActivity(),"(V8) 8/02/2018 10:15 am",Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getContext(), Activity_JuegoPuzzle.class);
+                startActivity(i);
+                //Toast.makeText(getActivity(),"(V8) 8/02/2018 10:15 am",Toast.LENGTH_SHORT).show();
             }
         });
 

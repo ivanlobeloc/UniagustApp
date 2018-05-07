@@ -1,6 +1,5 @@
 package com.uniagustiniana.tecnologias.uniagustapp.fragmentos;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -14,11 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.uniagustiniana.tecnologias.uniagustapp.CustomSwipeAadapter;
-
-import com.uniagustiniana.tecnologias.uniagustapp.MapsActivity;
+import com.uniagustiniana.tecnologias.uniagustapp.adaptadores.CustomSwipeAadapter_Home;
 import com.uniagustiniana.tecnologias.uniagustapp.R;
-
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -29,7 +25,7 @@ public class Fragment_Home extends Fragment {
 
     //ViewPager
     ViewPager viewPager;
-    CustomSwipeAadapter adapter;
+    CustomSwipeAadapter_Home adapter;
 
     public Fragment_Home() {
         // Required empty public constructor
@@ -45,7 +41,7 @@ public class Fragment_Home extends Fragment {
         View viewPagerView = v.findViewById(R.id.view_pager);// resuelto con pregunta: https://es.stackoverflow.com/q/118826/34903
         if (viewPagerView != null ) {
             viewPager = (ViewPager)viewPagerView;
-            adapter = new CustomSwipeAadapter(getContext());
+            adapter = new CustomSwipeAadapter_Home(getContext());
             viewPager.setAdapter(adapter);
 
             Timer timer = new Timer();

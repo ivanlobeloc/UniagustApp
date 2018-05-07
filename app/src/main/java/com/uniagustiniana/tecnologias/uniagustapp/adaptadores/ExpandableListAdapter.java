@@ -1,4 +1,4 @@
-package com.uniagustiniana.tecnologias.uniagustapp;
+package com.uniagustiniana.tecnologias.uniagustapp.adaptadores;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 
 //import com.uniagustiniana.tecnologias.R;
+import com.uniagustiniana.tecnologias.uniagustapp.R;
 import com.uniagustiniana.tecnologias.uniagustapp.objects.ElementoMenu;
 
 import java.util.HashMap;
